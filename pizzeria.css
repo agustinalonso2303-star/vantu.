@@ -1,0 +1,615 @@
+/* CSS para Pizzería - Paleta de colores personalizada */
+:root {
+    --primary-color: #B50302;
+    --secondary-color: #C31F20;
+    --accent-color: #4CAF50;
+    --background-color: #FFF5D2;
+    --text-color: #B50302;
+    --light-color: #FFF5D2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    background-image: 
+        linear-gradient(45deg, var(--primary-color) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--primary-color) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, var(--primary-color) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--primary-color) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-left {
+    flex: 1;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.demo-premium-btn {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #512874;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.demo-premium-btn:hover {
+    background: linear-gradient(135deg, #FFA500, #FF8C00);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+}
+
+.demo-premium-btn:focus {
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--light-color);
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    margin-top: 80px;
+    padding: 0.5rem;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    margin-bottom: 1.5rem;
+    padding: 3.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: var(--background-color);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pizza-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pizza-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--light-color);
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.pizza-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--background-color);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 2rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pizza-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.category {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.pizza-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.pizza-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.specialty-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.specialty-item:hover {
+    transform: translateY(-5px);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: var(--background-color);
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.specialty-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--light-color);
+    border-radius: 10px;
+}
+
+.contact-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.delivery-info {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    border: 2px dashed var(--primary-color);
+}
+
+.map-container {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.map-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.map-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    height: 400px;
+}
+
+.map-wrapper iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.map-container p {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.delivery-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.brand-name {
+    font-family: 'Lobster', cursive;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    background-color: #128C7E;
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-float:focus {
+    outline: 3px solid #25D366;
+    outline-offset: 2px;
+}
+
+/* Mejoras de accesibilidad */
+.cta-button:focus,
+.nav-links a:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Mejoras responsive */
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .pizza-categories {
+        gap: 2rem;
+    }
+    
+    .specialty-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .pizza-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para sección de historia */
+.historia-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.historia-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.historia-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.historia-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.value-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--light-color);
+    border-radius: 15px;
+    transition: transform 0.3s;
+    border: 2px solid var(--accent-color);
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.value-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Estilos para redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.social-link svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Estilos para botón Premium */
+.premium-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s;
+    z-index: 1000;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Lobster', cursive;
+}
+
+.premium-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+}
+
+.premium-icon {
+    font-size: 1.2rem;
+}
+
+.premium-text {
+    font-size: 1rem;
+}
+
+/* Responsive para botones */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-float svg {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .premium-button {
+        bottom: 20px;
+        left: 20px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .premium-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Media Query específica para móvil - PRIORIDAD MÁXIMA */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero {
+        padding: 0 20px !important;
+    }
+    
+    .hero-content {
+        padding: 0 20px !important;
+    }
+    
+    section {
+        padding: 2rem 20px !important;
+    }
+}

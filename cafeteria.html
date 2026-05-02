@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería - Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Waffle+Soft:wght@300;400;600;700&family=Poppins:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cafeteria.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">Ugly American Cookie</div>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <button class="demo-premium-btn" onclick="toggleDemo()">Demo Premium</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="hero">
+                <h1>Bienvenidos a Ugly American Cookie</h1>
+                <p>El mejor café y ambiente para tu día</p>
+                <div class="cafeteria-biografia">
+                    <div class="biografia-contenido">
+                        <h4>Nuestra Historia</h4>
+                        <p>Ugly American Cookie nació en 2020 como un sueño compartido entre dos amigos apasionados por el café y los postres artesanales. Lo que comenzó como un pequeño proyecto en una cocina casera pronto se convirtió en un referente de la comunidad local.</p>
+                        <p>Nuestra filosofía es simple: ofrecer productos de la más alta calidad con ingredientes locales y recetas que han sido perfeccionadas durante generaciones. Cada cookie que horneamos y cada café que preparamos cuenta una historia de tradición y pasión.</p>
+                        <p>Hoy, Ugly American Cookie no es solo una cafetería, es un hogar para aquellos que buscan un momento de paz en su día a día, un lugar donde el aroma a café recién hecho se mezcla con el dulce perfume de nuestras cookies horneadas al momento.</p>
+                        <div class="biografia-firma">
+                            <p><em>"Cada día es una oportunidad para endulzar la vida de alguien"</em></p>
+                            <p>- Los Fundadores</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.pedidosya.com.ar/restaurantes/pilar/ugly-american-cookie--la-lonja-409087dc-b507-47a7-bc70-156c118de30d-menu" 
+       class="cta-button" 
+       target="_blank">Pedí acá</a>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <h3>☕ Café Artesanal</h3>
+                    <p>Tostado local y métodos de preparación únicos</p>
+                </div>
+                <div class="feature">
+                    <h3>🥐 Pastelería Fresca</h3>
+                    <p>Elaborado diariamente con ingredientes premium</p>
+                </div>
+                <div class="feature">
+                    <h3>🎵 Ambiente Acogedor</h3>
+                    <p>Música suave y decoración cálida</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo">
+            <h2>Nuestro Catálogo</h2>
+            <div class="catalogo-vertical">
+                <div class="catalogo-item">
+                    <div class="catalogo-image">
+                        <div class="placeholder-image">
+                            <span>🍪</span>
+                            <h3>Cookies</h3>
+                        </div>
+                    </div>
+                    <div class="catalogo-content">
+                        <h3>Cookies Clásicas</h3>
+                        <p>Nuestras cookies tradicionales hechas con los mejores ingredientes. Cada una es una obra de arte dulce que combina la perfección crujiente por fuera con la suavidad por dentro.</p>
+                        <p>Disponibles en: Chocolate, Avena, M&M's, y Nueces.</p>
+                    </div>
+                </div>
+                
+                <div class="catalogo-item">
+                    <div class="catalogo-image">
+                        <div class="placeholder-image">
+                            <span>🍰</span>
+                            <h3>Mini Tortas</h3>
+                        </div>
+                    </div>
+                    <div class="catalogo-content">
+                        <h3>Mini Tortas Especiales</h3>
+                        <p>Pequeños deleites de tamaño perfecto para un capricho dulce. Nuestras mini tortas combinan sabores intensos con porciones ideales, elaboradas con ingredientes premium y mucho amor.</p>
+                        <p>Sabores disponibles: Tres Leches, Red Velvet, y Limón Merengado.</p>
+                    </div>
+                </div>
+                
+                <div class="catalogo-item">
+                    <div class="catalogo-image">
+                        <div class="placeholder-image">
+                            <span>�</span>
+                            <h3>Giants</h3>
+                        </div>
+                    </div>
+                    <div class="catalogo-content">
+                        <h3>Giants Cookies</h3>
+                        <p>Para los verdaderos amantes del dulce, nuestras Giant Cookies son el doble de grandes y el doble de deliciosas. Perfectas para compartir o para cuando necesitas un extra de felicidad.</p>
+                        <p>Variedades exclusivas: Triple Chocolate, Cookie Dough, y Snickers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros">
+            <h2>Zona de Merch</h2>
+            <div class="story">
+                <div class="story-text">
+                    <p>Lleva contigo un pedazo de Ugly American Cookie. Nuestra colección exclusiva de merchandising está diseñada para los verdaderos amantes del café y las cookies.</p>
+                    <p>Desde tazas térmicas hasta camisetas de edición limitada, cada producto está cuidadosamente seleccionado para representar nuestra pasión por el buen sabor y el estilo único.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-content">
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-content">
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carousel">
+            <h2>Nuestra Galería</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Cards originales -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 1</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 2</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 3</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 4</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 5</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 6</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <!-- Cards duplicadas para carousel infinito -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 1</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 2</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 3</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 4</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 5</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Card 6</h3>
+                            <p>Contenido vacío con bordes marcados</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">‹</button>
+                <button class="carousel-btn next-btn" onclick="moveCarousel(1)">›</button>
+            </div>
+        </section>
+
+        
+        <section id="contacto">
+            <h2>Visítanos</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📍 Dirección</h3>
+                    <p>Rincon Chico - Pueblo, R. Caamaño 844, B1631 Pilar</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Teléfono</h3>
+                    <p>+54 9 11 2478-6507</p>
+                </div>
+                                <div class="contact-item">
+                    <h3>🕐 Horario</h3>
+                    <p>Lunes a Viernes: 7:00 - 20:00</p>
+                    <p>Sábados y Domingos: 8:00 - 22:00</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <h3>🗺️ Ubicación</h3>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.8475%2C-34.4163%2C-58.8455%2C-34.4143&layer=mapnik&marker=-34.415283%2C-58.846475" 
+                        width="100%" 
+                        height="300" 
+                        frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p>Rincon Chico - Pueblo, R. Caamaño 844, B1631 Pilar</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@uglyamericancookie?_r=1&_t=ZS-95nTu0gCfVk" class="social-link" title="TikTok" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.03 1.68-.24 3.44-1.14 4.88-.98 1.57-2.66 2.6-4.48 2.83-1.48.2-3.06-.03-4.35-.82-.95-.58-1.72-1.46-2.22-2.48-.51-1.04-.71-2.22-.66-3.38.07-1.56.54-3.12 1.52-4.36.99-1.28 2.46-2.13 4.04-2.36.96-.15 1.95-.1 2.9.12.01 1.48-.01 2.96-.02 4.44-.6-.23-1.28-.35-1.92-.2-.83.15-1.54.78-1.79 1.58-.26.81-.1 1.74.46 2.37.57.64 1.49.89 2.32.68.73-.18 1.31-.75 1.53-1.47.21-.67.2-1.39.2-2.09-.02-3.89.01-7.78-.02-11.67-.01-.96-.06-1.92-.19-2.87z"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/uglyamericancookie?igsh=cXV2YnFlbWg5MTc5" class="social-link" title="Instagram" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                </svg>
+            </a>
+        </div>
+        <p>&copy; 2024 <span class="brand-name">Ugly American Cookie</span>. Todos los derechos reservados.</p>
+        <p>hecho con vantu</p>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491124786507?text=¡Hola!%20Vi%20tu%20página%20web%20y%20me%20gustaría%20hacer%20una%20reserva." 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Reservar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.89-11.893A11.821 11.821 0 0020.465 3.488"/>
+        </svg>
+    </a>
+<script>
+        let currentSlide = 0;
+        const track = document.querySelector('.carousel-track');
+        const cards = document.querySelectorAll('.card');
+        const originalCards = 6; // Número de cards originales
+        const totalCards = cards.length; // Total incluyendo duplicadas (12)
+        const cardsToShow = 3; // Number of cards visible at once
+        const slideWidth = 315; // card width + gap
+
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            
+            // Si llegamos al final de las cards originales, resetear suavemente
+            if (currentSlide >= originalCards) {
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    currentSlide = 0;
+                    track.style.transform = `translateX(0)`;
+                    setTimeout(() => {
+                        track.style.transition = 'transform 0.3s ease';
+                    }, 50);
+                }, 300);
+            } else if (currentSlide < 0) {
+                currentSlide = originalCards - 1;
+            }
+            
+            track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        // Auto-scroll carousel infinito
+        setInterval(() => {
+            moveCarousel(1);
+        }, 4000);
+
+        // Inicializar sin transición para evitar salto inicial
+        track.style.transition = 'none';
+        track.style.transform = `translateX(0)`;
+        setTimeout(() => {
+            track.style.transition = 'transform 0.3s ease';
+        }, 50);
+
+        let esModoBasico = false;
+
+        // Función para alternar entre versiones
+        function toggleDemo() {
+            const botonDemo = document.querySelector('.demo-premium-btn');
+            
+            if (!esModoBasico) {
+                // Activar modo básico
+                mostrarDemoBasico();
+                botonDemo.textContent = 'Volver a Premium';
+                botonDemo.style.background = 'linear-gradient(135deg, #FF6B6B, #FF8E53)';
+                esModoBasico = true;
+            } else {
+                // Volver a modo premium
+                volverAPremium();
+                botonDemo.textContent = 'Demo Premium';
+                botonDemo.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
+                esModoBasico = false;
+            }
+        }
+
+        // Función para mostrar versión básica
+        function mostrarDemoBasico() {
+            // Ocultar todas las secciones excepto las básicas
+            const seccionesAOcultar = [
+                'catalogo', 
+                'nosotros', 
+                'carousel'
+            ];
+            
+            seccionesAOcultar.forEach(id => {
+                const seccion = document.getElementById(id);
+                if (seccion) {
+                    seccion.style.display = 'none';
+                }
+            });
+            
+            // Ocultar botón "Pedí acá" del hero
+            const botonHero = document.querySelector('.cta-button');
+            if (botonHero) {
+                botonHero.style.display = 'none';
+            }
+            
+            // Actualizar navegación para versión básica
+            actualizarNavegacionBasica();
+            
+            // Modificar sección de contacto para quitar el mapa
+            const mapContainer = document.querySelector('.map-container');
+            if (mapContainer) {
+                mapContainer.style.display = 'none';
+            }
+            
+            // Ajustar el espaciado del main
+            const main = document.querySelector('main');
+            if (main) {
+                main.style.marginTop = '0';
+            }
+            
+                    }
+
+        // Función para actualizar navegación a versión básica
+        function actualizarNavegacionBasica() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+                navLinks.innerHTML = `
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                `;
+            }
+        }
+
+        // Función para restaurar navegación premium
+        function actualizarNavegacionPremium() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+                navLinks.innerHTML = `
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                `;
+            }
+        }
+
+        // Función para volver a versión premium
+        function volverAPremium() {
+            // Mostrar todas las secciones ocultas
+            const seccionesAMostrar = [
+                'catalogo', 
+                'nosotros', 
+                'carousel'
+            ];
+            
+            seccionesAMostrar.forEach(id => {
+                const seccion = document.getElementById(id);
+                if (seccion) {
+                    seccion.style.display = 'block';
+                }
+            });
+            
+            // Mostrar botón "Pedí acá" del hero
+            const botonHero = document.querySelector('.cta-button');
+            if (botonHero) {
+                botonHero.style.display = 'inline-block';
+            }
+            
+            // Restaurar navegación premium
+            actualizarNavegacionPremium();
+            
+            // Eliminar contenedor flotante y restaurar botón original
+            const contenedorFlotante = document.querySelector('div[style*="position: fixed"]');
+            if (contenedorFlotante) {
+                contenedorFlotante.remove();
+            }
+            
+            const botonDemoOriginal = document.querySelector('.demo-premium-btn');
+            if (botonDemoOriginal) {
+                botonDemoOriginal.style.display = 'inline-block';
+                botonDemoOriginal.onclick = toggleDemo;
+            }
+            
+            // Restaurar sección de contacto con mapa
+            const mapContainer = document.querySelector('.map-container');
+            if (mapContainer) {
+                mapContainer.style.display = 'block';
+            }
+            
+            // Restaurar el espaciado del main
+            const main = document.querySelector('main');
+            if (main) {
+                main.style.marginTop = '80px';
+            }
+            
+                    }
+    </script>
+</body>
+</html>

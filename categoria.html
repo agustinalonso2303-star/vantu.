@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría - Página Genérica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <span class="logo-text">TuWeb</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="index.html#pricing" class="nav-link">Precios</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+                <a href="index.html#contact" class="nav-link">Contacto</a>
+                <a href="https://wa.me/5491170983414?text=Hola%20estoy%20interesado%20en%20sus%20servicios" class="whatsapp-btn" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-1.03-.246-.141-.547-.048-.746.165-.199.213-.537.447-.637.665-.099.218-.218.447-.218.637 0 .848.672 1.537 1.5 1.537.828 0 1.5-.689 1.5-1.537 0-.19-.019-.419-.218-.637-.09-.218-.438-.447-.637-.665-.199-.149-.5-.306-.746-.165-.246.163-.449.881-.203 1.03.149.272.163.733.867 2.03 1.03.246.141.547.048.746-.165.199-.213.537-.447.637-.665.099-.218.218-.447.218-.637 0-.848-.672-1.537-1.5-1.537-.828 0-1.5.689-1.5 1.537 0 .19.019.419.218.637.09.218.438.447.637.665.199.149.5.306.746.165.246-.163.449-.881.203-1.03-.149-.272-.163-.733-.867-2.03-1.03-.246-.141-.547-.048-.746.165-.199.213-.537.447-.637.665-.099.218-.218.447-.218.637 0 .848.672 1.537 1.5 1.537.828 0 1.5-.689 1.5-1.537z"/>
+                        <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+                    </svg>
+                    WhatsApp
+                </a>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="category-hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="category-title">Categoría</h1>
+            <p id="category-description">Descripción de la categoría</p>
+            <div class="hero-cta">
+                <button class="hero-btn primary" onclick="scrollToProducts()">Ver Productos</button>
+                <button class="hero-btn secondary" onclick="scrollToContact()">Contactar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="category-main">
+        <div class="container">
+            <!-- Products Grid -->
+            <section class="products-section" id="products">
+                <h2 class="section-title">Nuestros Productos y Servicios</h2>
+                <div class="products-grid" id="products-grid">
+                    <!-- Los productos se cargarán dinámicamente -->
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <h2 class="section-title">Características Principales</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Diseño Profesional</h3>
+                        <p>Interfaces modernas y optimizadas para convertir visitantes en clientes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>100% Responsive</h3>
+                        <p>Perfecta visualización en todos los dispositivos y tamaños de pantalla.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Rendimiento Óptimo</h3>
+                        <p>Carga rápida y navegación fluida para la mejor experiencia.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="corporate-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#features">Características</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+5491170983414">+54 9 1170983414</a></li>
+                        <li><a href="mailto:info@tuweb.com">info@tuweb.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TuWeb. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Datos dinámicos de categorías
+        const categoryData = {
+            'pizzeria': {
+                titulo: 'Soluciones para Pizzerías',
+                descripcion: 'Plataformas digitales especializadas para pizzerías que quieren aumentar sus ventas online',
+                imagenHero: 'https://images.unsplash.com/photo-1565299624946-b28f40a9ae91?w=1200',
+                productos: [
+                    { nombre: 'Sistema de Pedidos Online', precio: '$80.000', descripcion: 'Recibe pedidos directamente desde tu página' },
+                    { nombre: 'Menú Digital Interactivo', precio: '$110.000', descripcion: 'Menú atractivo con fotos y precios actualizados' },
+                    { nombre: 'Delivery Tracker', precio: '$150.000', descripcion: 'Seguimiento en tiempo real de entregas' }
+                ]
+            },
+            'gimnasio': {
+                titulo: 'Plataformas para Gimnasios',
+                descripcion: 'Sistemas completos para gestión de gimnasios y centros de fitness',
+                imagenHero: 'https://images.unsplash.com/photo-1571902943206-507026980067?w=1200',
+                productos: [
+                    { nombre: 'Sistema de Membresías', precio: '$80.000', descripcion: 'Gestión completa de membresías y pagos' },
+                    { nombre: 'Reserva de Clases', precio: '$110.000', descripcion: 'Sistema de reservas online para clases' },
+                    { nombre: 'App Móvil', precio: '$150.000', descripcion: 'Aplicación móvil para tus miembros' }
+                ]
+            },
+            'peluqueria': {
+                titulo: 'Soluciones para Peluquerías',
+                descripcion: 'Plataformas digitales diseñadas específicamente para peluquerías y salones de belleza',
+                imagenHero: 'https://images.unsplash.com/photo-1560069000270-5e5352893280?w=1200',
+                productos: [
+                    { nombre: 'Sistema de Turnos', precio: '$80.000', descripcion: 'Gestión de turnos y citas online' },
+                    { nombre: 'Galería de Servicios', precio: '$110.000', descripcion: 'Catálogo visual de todos tus servicios' },
+                    { nombre: 'Recordatorios SMS', precio: '$150.000', descripcion: 'Sistema automático de recordatorios' }
+                ]
+            }
+        };
+
+        // Obtener ID de la URL
+        function getCategoryFromURL() {
+            const path = window.location.pathname;
+            const match = path.match(/categoria\/([^\/]+)/);
+            return match ? match[1] : null;
+        }
+
+        // Cargar datos de la categoría
+        function loadCategoryData() {
+            const categoryId = getCategoryFromURL();
+            const category = categoryData[categoryId];
+            
+            if (category) {
+                // Actualizar título y descripción
+                document.getElementById('category-title').textContent = category.titulo;
+                document.getElementById('category-description').textContent = category.descripcion;
+                
+                // Actualizar imagen de hero
+                const heroSection = document.querySelector('.category-hero');
+                if (heroSection) {
+                    heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${category.imagenHero}')`;
+                    heroSection.style.backgroundSize = 'cover';
+                    heroSection.style.backgroundPosition = 'center';
+                }
+                
+                // Cargar productos
+                loadProducts(category.productos);
+            }
+        }
+
+        // Cargar productos dinámicamente
+        function loadProducts(productos) {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+            
+            productos.forEach(producto => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400" alt="${producto.nombre}">
+                    </div>
+                    <div class="product-content">
+                        <h3>${producto.nombre}</h3>
+                        <p>${producto.descripcion}</p>
+                        <div class="product-price">${producto.precio}</div>
+                        <button class="product-cta" onclick="redirectToWhatsApp('${producto.nombre}')">Consultar</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Funciones de navegación
+        function scrollToProducts() {
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToContact() {
+            document.querySelector('.corporate-footer').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function redirectToWhatsApp(producto) {
+            const message = `Hola, estoy interesado en: ${producto}`;
+            window.open(`https://wa.me/5491170983414?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar preferencia de dark mode
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Cargar datos de categoría
+            loadCategoryData();
+        });
+    </script>
+</body>
+</html>

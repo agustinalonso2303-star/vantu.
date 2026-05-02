@@ -1,0 +1,16 @@
+{
+  "businessName": "Heladería Dulce Sueño",
+  "description": "La mejor heladería artesanal de la ciudad. Sabores únicos y ingredientes frescos para endulzar tus momentos.",
+  "whatsapp": "5491123456789",
+  "heroImage": "https://images.unsplash.com/photo-1488900128323-21503983a07a?w=1600&h=900&fit=crop",
+  "gallery": [
+    "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1504754524776-6f4056b3b6b5?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=800&h=600&fit=crop"
+  ],
+  "address": "Av. Corrientes 1234, C1043 CABA, Argentina",
+  "hours": "Lunes a Viernes: 12:00 - 22:00\nSábados: 11:00 - 23:00\nDomingos: 11:00 - 22:00",
+  "mapEmbed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0169878456!2d-58.3815576847709!3d-34.60373458045954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb5b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sAv.%20Corrientes%201234%2C%20C1043%20CABA!5e0!3m2!1ses!2sar!4v1234567890\" width=\"100%\" height=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+}

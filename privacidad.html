@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad - Vantu Web Development">
+    <title>Política de Privacidad - Vantu</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Modo Oscuro -->
+    <script src="dark-mode.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            .dark-mode-toggle {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        /* Modo Oscuro */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+        
+        body.dark-mode .container {
+            background-color: #2d2d2d;
+        }
+        
+        body.dark-mode h1 {
+            color: #ffffff;
+        }
+        
+        body.dark-mode h2 {
+            color: #e5e5e5;
+            border-bottom-color: #404040;
+        }
+        
+        body.dark-mode p {
+            color: #a0a0a0;
+        }
+        
+        body.dark-mode li {
+            color: #a0a0a0;
+        }
+        
+        body.dark-mode .contact-section {
+            background-color: #2d2d2d;
+            border-left-color: #404040;
+        }
+        
+        body.dark-mode .back-link {
+            background: #404040;
+            color: #e5e5e5;
+        }
+        
+        body.dark-mode .back-link:hover {
+            background: #555555;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Botón de Modo Nocturno -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle" onclick="toggleDarkMode()" title="Modo Nocturno">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="moon-icon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0-9.79 9.79 9.79 0 0 0 9.79-9.79A9 9 0 0 0 21 12.79z"/>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" class="sun-icon" style="display: none;">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-2c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6-6-2.69-6-6 6zm0 14c3.31 0 6-2.69 6-6s-2.69-6-6-6-6-2.69-6-6 6zm0-18c-3.31 0-6 2.69-6 6s2.69 6 6 6-2.69 6-6-6-2.69-6-6 6zm0 2c2.21 0 4 1.79 4 4s-1.79 4-4 4-1.79-4-4-1.79-4-4 4zm0 14c2.21 0 4 1.79 4 4s-1.79 4-4 4-1.79-4-4-1.79-4-4 4z"/>
+        </svg>
+    </button>
+    <div class="container">
+        <h1>Política de Privacidad</h1>
+        
+        <p><strong>Última actualización:</strong> Enero 2026</p>
+        
+        <h2>1. Datos que Recopilamos</h2>
+        <p>Recopilamos únicamente los datos que nos proporcionás voluntariamente al contactarnos:</p>
+        <ul>
+            <li><strong>Nombre y teléfono:</strong> Para comunicarnos y coordinar el servicio</li>
+            <li><strong>Información del negocio:</strong> Nombre, rubro y ubicación para personalizar tu página</li>
+            <li><strong>Mensajes de WhatsApp:</strong> Historial de conversaciones para dar soporte adecuado</li>
+        </ul>
+        
+        <h2>2. ¿Cómo recopilamos los datos?</h2>
+        <p>Recopilamos datos únicamente cuando nos contactás voluntariamente a través de:</p>
+        <ul>
+            <li>WhatsApp directo desde nuestro sitio web</li>
+            <li>Formularios en páginas de demo</li>
+            <li>Comunicación directa por WhatsApp</li>
+        </ul>
+        
+        <p><strong>Base legal:</strong> El tratamiento de los datos se realiza sobre la base del consentimiento del usuario al contactarse voluntariamente.</p>
+        
+        <h2>3. ¿Para qué usamos tus datos?</h2>
+        <p>Utilizamos tu información únicamente para:</p>
+        <ul>
+            <li>Comunicarnos con vos sobre nuestros servicios</li>
+            <li>Preparar una propuesta personalizada</li>
+            <li>Coordinar reuniones y consultas</li>
+            <li>Brindarte soporte post-venta</li>
+        </ul>
+        
+        <h2>¿Compartimos tus datos con terceros?</h2>
+        <p><strong>No.</strong> Jamás vendemos, alquilamos ni compartimos tu información personal con terceros. Tus datos permanecen confidenciales y se utilizan exclusivamente para la prestación de nuestros servicios.</p>
+        
+        <h2>Tus derechos como usuario</h2>
+        <p>Como usuario, tenés derecho a:</p>
+        <ul>
+            <li>Acceder a tus datos personales que tenemos registrados</li>
+            <li>Solicitar la corrección de información incorrecta</li>
+            <li>Pedir la eliminación de tus datos de nuestros sistemas</li>
+            <li>Saber cómo estamos utilizando tu información</li>
+        </ul>
+        
+        <h2>6. Seguridad de los Datos</h2>
+        <p>Implementamos medidas de seguridad razonables para proteger tu información:</p>
+        <ul>
+            <li>Almacenamiento seguro en plataformas confiables</li>
+            <li>Acceso restringido al personal autorizado</li>
+            <li>Comunicación segura a través de WhatsApp</li>
+            <li>Protección contra accesos no autorizados</li>
+        </ul>
+        
+        <h2>7. Retención de Datos</h2>
+        <p>Conservamos tus datos personales únicamente durante el tiempo necesario para cumplir con los fines para los cuales fueron recopilados. Una vez cumplido el propósito, tus datos serán eliminados de nuestros sistemas de forma segura.</p>
+        
+        <h2>8. Marco Legal</h2>
+        <p>Nuestra política de privacidad cumple con la <strong>Ley de Protección de Datos Personales N° 25.326</strong> de Argentina y sus disposiciones reglamentarias. Nos comprometemos a proteger tu privacidad y cumplir con todas las normativas vigentes.</p>
+        
+        <div class="contact-section">
+            <h2>Contacto para consultas de privacidad</h2>
+            <p>Si tenés preguntas sobre esta política o querés ejercer tus derechos, contactanos:</p>
+            <ul>
+                <li><strong>Email:</strong> privacidad@vantu.com</li>
+                <li><strong>WhatsApp:</strong> +54 9 1170983414</li>
+            </ul>
+        </div>
+        
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+    </div>
+</body>
+</html>

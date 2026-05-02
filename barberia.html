@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Urbana - Flow de Barrio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="barberia.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo">🔥 URBAN CUTS</div>
+                <div class="tagline">Flow de Barrio</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#cortes">Cortes</a></li>
+                <li><a href="#merch">Merch</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="demo-premium-btn" onclick="toggleDemo()">Demo Premium</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="main-title">URBAN CUTS</h1>
+                    <p class="subtitle">Donde el Flow se Encuentra con la Calle</p>
+                    <p class="hero-description">Cortes de alta calidad con estilo urbano. Más que una barbería, es cultura de barrio.</p>
+                    <div class="biografia">
+                        <p>Urban Cuts nació en 2018 como un sueño compartido entre tres amigos apasionados por el arte del cabello y la cultura urbana. Lo que comenzó como un pequeño local en el corazón del barrio, pronto se convirtió en un referente para quienes buscan más que un corte: buscan identidad, estilo y comunidad. Hoy, Urban Cuts no es solo una barbería, es un punto de encuentro donde el flow de la calle se transforma en arte.</p>
+                    </div>
+                    <div class="cta-buttons" style="display: none;">
+                        <a href="https://wa.me/5491130112155?text=¡Hola!%20Vi%20tu%20página%20web%20y%20quiero%20agendar%20un%20turno%20en%20Urban%20Cuts." class="cta-button primary" target="_blank">Agendar Turno</a>
+                        <a href="#servicios" class="cta-button secondary">Ver Servicios</a>
+                    </div>
+                </div>
+                            </div>
+        </section>
+
+        <section id="servicios">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Corte Clásico</h3>
+                    <p>Corte tradicional con técnica profesional</p>
+                    <div class="price">$15.00</div>
+                    <ul class="service-details">
+                        <li>Degradado perfecto</li>
+                        <li>Detalles precisos</li>
+                        <li>Finalizado con producto</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Diseño Urbano</h3>
+                    <p>Arte y creatividad en tu cabello</p>
+                    <div class="price">$25.00</div>
+                    <ul class="service-details">
+                        <li>Diseños personalizados</li>
+                        <li>Técnicas de fade</li>
+                        <li>Estilo único</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧔</div>
+                    <h3>Barba Completa</h3>
+                    <p>Cuidado profesional de barba</p>
+                    <div class="price">$20.00</div>
+                    <ul class="service-details">
+                        <li>Recorte y perfilado</li>
+                        <li>Aplicación de hot towel</li>
+                        <li>Aceites esenciales</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cortes">
+            <h2 class="section-title">Catálogo de Cortes</h2>
+            <div class="cuts-gallery">
+                <div class="cut-item">
+                    <div class="cut-image">
+                        <div class="image-placeholder">✂️ Fade Clásico</div>
+                    </div>
+                    <h3>Fade Clásico</h3>
+                    <p>Degradado suave y elegante</p>
+                    <span class="cut-price">$15</span>
+                </div>
+                <div class="cut-item">
+                    <div class="cut-image">
+                        <div class="image-placeholder">💈 Undercut</div>
+                    </div>
+                    <h3>Undercut Urbano</h3>
+                    <p>Estilo moderno y audaz</p>
+                    <span class="cut-price">$18</span>
+                </div>
+                <div class="cut-item">
+                    <div class="cut-image">
+                        <div class="image-placeholder">🔥 Mohawk</div>
+                    </div>
+                    <h3>Mohawk Street</h3>
+                    <p>Para los más atrevidos</p>
+                    <span class="cut-price">$22</span>
+                </div>
+                <div class="cut-item">
+                    <div class="cut-image">
+                        <div class="image-placeholder">🔗 Dreadlocks</div>
+                    </div>
+                    <h3>Dreads Style</h3>
+                    <p>Mantenimiento y estilo</p>
+                    <span class="cut-price">$25</span>
+                </div>
+                <div class="cut-item">
+                    <div class="cut-image">
+                        <div class="image-placeholder">⚙️ Crew Cut</div>
+                    </div>
+                    <h3>Crew Cut Pro</h3>
+                    <p>Clásico militar moderno</p>
+                    <span class="cut-price">$12</span>
+                </div>
+                <div class="cut-item">
+                    <div class="cut-image">
+                        <div class="image-placeholder">Line Up</div>
+                    </div>
+                    <h3>Line Up Perfect</h3>
+                    <p>Líneas perfectas y definidas</p>
+                    <span class="cut-price">$10</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="merch">
+            <h2 class="section-title">Urban Merch</h2>
+            <div class="merch-grid">
+                <div class="merch-item">
+                    <div class="merch-image">
+                        <div class="image-placeholder">🧢 Gorra Urban</div>
+                    </div>
+                    <h3>Gorra Urban Cuts</h3>
+                    <p>Estilo exclusivo de la barbería</p>
+                    <div class="merch-price">$25.00</div>
+                    <button class="merch-btn">Comprar</button>
+                </div>
+                <div class="merch-item">
+                    <div class="merch-image">
+                        <div class="image-placeholder">👕 Camiseta</div>
+                    </div>
+                    <h3>Camiseta Flow</h3>
+                    <p>100% algodón, diseño urbano</p>
+                    <div class="merch-price">$30.00</div>
+                    <button class="merch-btn">Comprar</button>
+                </div>
+                <div class="merch-item">
+                    <div class="merch-image">
+                        <div class="image-placeholder">🧥 Sudadera</div>
+                    </div>
+                    <h3>Sudadera Premium</h3>
+                    <p>Edición limitada</p>
+                    <div class="merch-price">$45.00</div>
+                    <button class="merch-btn">Comprar</button>
+                </div>
+                <div class="merch-item">
+                    <div class="merch-image">
+                        <div class="image-placeholder">🧢 Gorros</div>
+                    </div>
+                    <h3>Gorro Beanie</h3>
+                    <p>Calidez y estilo urbano</p>
+                    <div class="merch-price">$20.00</div>
+                    <button class="merch-btn">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="resenas">
+            <h2 class="section-title">⭐ Lo Que Dicen los Clientes</h2>
+            <div class="reviews-carousel">
+                <div class="review-card active">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"La mejor barbería de la zona. Excelente servicio y muy buen ambiente urbano. ¡Totalmente recomendado!"</p>
+                    <div class="review-author">- Carlos M.</div>
+                    <div class="review-date">Hace 2 días</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Me hicieron un fade perfecto y el diseño que pedí. Los barberos son verdaderos artistas del cabello."</p>
+                    <div class="review-author">- Juan P.</div>
+                    <div class="review-date">Hace 1 semana</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"El ambiente es increíble, música urbana y los barberos saben lo que hacen. Volveré seguro."</p>
+                    <div class="review-author">- Diego R.</div>
+                    <div class="review-date">Hace 3 días</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Servicio VIP de lujo. El masaje relajante y la atención son 10/10. Vale cada centavo."</p>
+                    <div class="review-author">- Martín L.</div>
+                    <div class="review-date">Hace 5 días</div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" onclick="changeReview(-1)">‹</button>
+                <button class="carousel-btn next" onclick="changeReview(1)">›</button>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Visítanos</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Dirección</h3>
+                    <p>Av. Corrientes 1234, CABA</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Teléfono</h3>
+                    <p>+54 9 11 5555-1234</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Instagram</h3>
+                    <p>@urban_cuts_barberia</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Horario</h3>
+                    <p>Lunes a Sábado: 10:00 - 20:00</p>
+                    <p>Domingos: 11:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <h3>Ubicación</h3>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.4250%2C-34.6037%2C-58.4150%2C-34.5937&layer=mapnik&marker=-34.5987%2C-58.4200" 
+                        width="100%" 
+                        height="300" 
+                        frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p>Calle Urbana #789, Barrio Centro</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>URBAN CUTS</h3>
+                <p>Flow de Barrio</p>
+                <p>Donde el estilo urbano cobra vida</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#cortes">Cortes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Urban Cuts Barbería. Todos los derechos reservados.</p>
+            <p>Hecho con Vantu</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491130112155?text=¡Hola!%20Vi%20tu%20página%20web%20y%20quiero%20agendar%20un%20turno%20en%20Urban%20Cuts." 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Agendar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.89-11.893A11.821 11.821 0 0020.465 3.488"/>
+        </svg>
+    </a>
+
+
+    <script>
+        let currentReview = 0;
+        const reviews = document.querySelectorAll('.review-card');
+        let esModoBasico = false;
+        
+        function showReview(index) {
+            reviews.forEach(review => review.classList.remove('active'));
+            reviews[index].classList.add('active');
+        }
+        
+        function changeReview(direction) {
+            currentReview += direction;
+            if (currentReview < 0) currentReview = reviews.length - 1;
+            if (currentReview >= reviews.length) currentReview = 0;
+            showReview(currentReview);
+        }
+        
+        // Auto-rotate reviews
+        setInterval(() => changeReview(1), 5000);
+        
+        // Función para alternar entre versiones
+        function toggleDemo() {
+            const botonDemo = document.querySelector('.demo-premium-btn');
+            
+            if (!esModoBasico) {
+                // Activar modo básico
+                mostrarDemoBasico();
+                botonDemo.textContent = 'Volver a Premium';
+                botonDemo.style.background = 'linear-gradient(135deg, #FF6B6B, #FF8E53)';
+                esModoBasico = true;
+            } else {
+                // Volver a modo premium
+                volverAPremium();
+                botonDemo.textContent = 'Demo Premium';
+                botonDemo.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
+                esModoBasico = false;
+            }
+        }
+        
+        function mostrarDemoBasico() {
+            // Ocultar TODAS las secciones completas como solicitaste
+            const seccionesAOcultar = [
+                'section[id="servicios"]',     // Sección servicios completa
+                'section[id="cortes"]',       // Sección cortes completa  
+                'section[id="merch"]',         // Sección merch completa
+                'section[id="resenas"]',       // Sección reseñas completa
+                '.cta-buttons',                // Botones CTA del hero
+                '.map-container'               // Mapa en contacto
+            ];
+            
+            seccionesAOcultar.forEach(selector => {
+                const elementos = document.querySelectorAll(selector);
+                elementos.forEach(elemento => {
+                    elemento.style.display = 'none';
+                });
+            });
+            
+            // Reorganizar elementos visuales del hero en 2x2 abajo
+            const heroVisual = document.querySelector('.hero-visual');
+            if (heroVisual) {
+                // Cambiar a grid 2x2
+                heroVisual.style.display = 'grid';
+                heroVisual.style.gridTemplateColumns = '1fr 1fr';
+                heroVisual.style.gridTemplateRows = '1fr 1fr';
+                heroVisual.style.gap = '1rem';
+                heroVisual.style.marginTop = '2rem';
+                heroVisual.style.justifyItems = 'center';
+                heroVisual.style.alignItems = 'center';
+                
+                // Eliminar TODAS las animaciones
+                const elementosGrafiti = heroVisual.querySelectorAll('.grafiti-element');
+                elementosGrafiti.forEach(elemento => {
+                    elemento.style.animation = 'none';
+                    elemento.style.transition = 'none';
+                });
+            }
+            
+            // Modificar precios a versión básica
+            const precios = document.querySelectorAll('.price, .cut-price');
+            precios.forEach(precio => {
+                const textoOriginal = precio.textContent;
+                if (textoOriginal.includes('$')) {
+                    const numero = parseFloat(textoOriginal.replace('$', '').replace(',', '.'));
+                    const precioBasico = (numero * 0.6).toFixed(2);
+                    precio.textContent = `$${precioBasico}`;
+                }
+            });
+            
+            // Ocultar sección "Síguenos" del footer en modo básico
+            const footerSection = document.querySelector('#siguenos');
+            if (footerSection) {
+                footerSection.style.display = 'none';
+            }
+            
+            // No mostrar mensaje básico como solicitaste
+        }
+        
+        function volverAPremium() {
+            // Restaurar elementos visuales del hero a su estado original
+            const heroVisual = document.querySelector('.hero-visual');
+            if (heroVisual) {
+                // Restaurar layout original (flex)
+                heroVisual.style.display = 'flex';
+                heroVisual.style.gridTemplateColumns = '';
+                heroVisual.style.gridTemplateRows = '';
+                heroVisual.style.gap = '2rem';
+                heroVisual.style.marginTop = '3rem';
+                heroVisual.style.justifyItems = '';
+                heroVisual.style.alignItems = '';
+                
+                // Restaurar animaciones originales
+                const elementosGrafiti = heroVisual.querySelectorAll('.grafiti-element');
+                elementosGrafiti.forEach((elemento, index) => {
+                    elemento.style.animation = '';
+                    elemento.style.transition = '';
+                    // Restaurar delays originales
+                    if (index === 0) elemento.style.animationDelay = '0s';
+                    if (index === 1) elemento.style.animationDelay = '1s';
+                    if (index === 2) elemento.style.animationDelay = '2s';
+                });
+            }
+            
+            // Mostrar todas las secciones ocultas
+            const elementosOcultos = document.querySelectorAll('[style*="display: none"]');
+            elementosOcultos.forEach(elemento => {
+                elemento.style.display = '';
+            });
+            
+            // Recargar para restaurar precios y estado completo
+            location.reload();
+        }
+        
+        // Detectar si viene de una categoría premium
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoria = urlParams.get('cat');
+            
+            if (categoria === 'premium') {
+                // La página se carga como premium
+                console.log('Modo Premium activado');
+            }
+        });
+    </script>
+</body>
+</html>
