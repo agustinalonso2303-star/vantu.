@@ -182,21 +182,18 @@ function toggleFAQ(element) {
         if (item !== element.parentElement) {
             const otherAnswer = item.querySelector('.faq-answer');
             const otherIcon = item.querySelector('.faq-icon');
-            otherAnswer.style.maxHeight = '0';
-            otherAnswer.style.padding = '0 24px';
+            otherAnswer.classList.add('hidden');
             if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
         }
     });
     
     // Toggle actual
-    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
-        answer.style.maxHeight = '0';
-        answer.style.padding = '0 24px';
-        if (icon) icon.style.transform = 'rotate(0deg)';
-    } else {
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        answer.style.padding = '0 24px 24px';
+    if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
         if (icon) icon.style.transform = 'rotate(45deg)';
+    } else {
+        answer.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
     }
 }
 

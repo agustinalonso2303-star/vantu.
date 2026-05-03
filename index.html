@@ -171,7 +171,7 @@
         </div>
         
         <!-- Contenido -->
-        <div class="relative z-10 container mx-auto px-4 text-center">
+        <div class="relative z-10 container mx-auto px-4 pt-24 md:pt-16 text-center">
             <div class="max-w-4xl mx-auto">
                 <h1 id="business-name" class="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 animate-fade-in">
                     <span class="gradient-text">Creamos sitios web profesionales</span>
@@ -184,7 +184,7 @@
                 </p>
                 
                 <!-- Botones CTA -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-slide-up" style="animation-delay: 0.2s;">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up" style="animation-delay: 0.2s;">
                     <a href="#pricing" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25 active:scale-95 inline-flex items-center space-x-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -198,53 +198,130 @@
                         <span>Contactar</span>
                     </a>
                 </div>
-                
-                <!-- Demostraciones en vivo -->
-                <div class="animate-slide-up" style="animation-delay: 0.4s;">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        <!-- Pizzería Demo -->
-                        <div class="group">
-                            <div class="relative overflow-hidden rounded-2xl shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105">
-                                <div class="aspect-video bg-gradient-to-br from-red-500 to-orange-500 p-4">
-                                    <div class="w-full h-full bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                                        <div class="text-center">
-                                            <div class="text-4xl mb-2">🍕</div>
-                                            <div class="text-white font-semibold">Pizzería Demo</div>
+
+                <!-- Sección de Estrategia -->
+                <div class="animate-slide-up" style="animation-delay: 0.6s;">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl md:text-3xl font-bold font-heading mb-4">
+                            <span class="gradient-text">Elegí tu estrategia</span>
+                        </h2>
+                        <p class="text-gray-300 max-w-2xl mx-auto">
+                            Elegí el tipo de web que mejor se adapte a las necesidades de tu negocio
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Card Dinámica -->
+                        <div class="group bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-blue-500/40 transition-all duration-300 transform hover:scale-105 p-8">
+                            <div class="flex flex-col items-center mb-4">
+                                <svg class="w-8 h-8 text-blue-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 2L3 14h9v7l9-11h-8z"></path>
+                                </svg>
+                                <h3 class="text-xl font-bold text-white">Locales en Movimiento</h3>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-center">
+                                Ideal si necesitás actualizar precios, menús o fotos semanalmente. Pensada para vender más
+                            </p>
+                            <div class="flex items-center justify-center text-blue-400 font-semibold mb-4">
+                                <span class="mr-2">Web Dinámica</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                            
+                            <!-- Demostraciones Dinámicas -->
+                            <div class="space-y-4 mb-6">
+                                <div class="relative overflow-hidden rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+                                    <div class="aspect-video bg-gradient-to-br from-red-500 to-orange-500 p-3">
+                                        <div class="w-full h-full bg-white/10 backdrop-blur-sm rounded flex items-center justify-center">
+                                            <div class="text-center">
+                                                <div class="text-3xl mb-1">🍕</div>
+                                                <div class="text-white text-sm font-medium">Pizzería Demo</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <button onclick="window.open('pizzeria.html', '_blank')" class="absolute bottom-2 right-2 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-xs font-medium transition-all duration-300 active:scale-95">
+                                        Ver ejemplo
+                                    </button>
                                 </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                
+                                <div class="relative overflow-hidden rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+                                    <div class="aspect-video bg-gradient-to-br from-amber-600 to-amber-800 p-3">
+                                        <div class="w-full h-full bg-white/10 backdrop-blur-sm rounded flex items-center justify-center">
+                                            <div class="text-center">
+                                                <div class="text-3xl mb-1">☕</div>
+                                                <div class="text-white text-sm font-medium">Cafetería Demo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <button onclick="window.open('cafeteria.html', '_blank')" class="absolute bottom-2 right-2 bg-amber-600 hover:bg-amber-700 text-white px-3 py-1 rounded text-xs font-medium transition-all duration-300 active:scale-95">
+                                        Ver ejemplo
+                                    </button>
+                                </div>
+                                
+                                <div class="relative overflow-hidden rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+                                    <div class="aspect-video bg-gradient-to-br from-purple-600 to-pink-600 p-3">
+                                        <div class="w-full h-full bg-white/10 backdrop-blur-sm rounded flex items-center justify-center">
+                                            <div class="text-center">
+                                                <div class="text-3xl mb-1">✂️</div>
+                                                <div class="text-white text-sm font-medium">Barbería Demo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <button onclick="window.open('barberia.html', '_blank')" class="absolute bottom-2 right-2 bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-xs font-medium transition-all duration-300 active:scale-95">
+                                        Ver ejemplo
+                                    </button>
+                                </div>
                             </div>
+                            
+                            <button onclick="window.location.href='#pricing'" class="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 active:scale-95">
+                                Ver detalles
+                            </button>
                         </div>
                         
-                        <!-- Cafetería Demo -->
-                        <div class="group">
-                            <div class="relative overflow-hidden rounded-2xl shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105">
-                                <div class="aspect-video bg-gradient-to-br from-amber-600 to-amber-800 p-4">
-                                    <div class="w-full h-full bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                                        <div class="text-center">
-                                            <div class="text-4xl mb-2">☕</div>
-                                            <div class="text-white font-semibold">Cafetería Demo</div>
+                        <!-- Card Estática -->
+                        <div class="group bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-green-500/40 transition-all duration-300 transform hover:scale-105 p-8">
+                            <div class="flex flex-col items-center mb-4">
+                                <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1L3 5v6l9 4 9-4V5l-9-4z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12l-9 4-9-4"></path>
+                                </svg>
+                                <h3 class="text-xl font-bold text-white">Presencia Profesional</h3>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-center">
+                                Ideal para servicios profesionales que buscan transmitir confianza y ser encontrados en Google
+                            </p>
+                            <div class="flex items-center justify-center text-green-400 font-semibold mb-4">
+                                <span class="mr-2">Web Estática</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                            
+                            <!-- Demostración Estática -->
+                            <div class="space-y-4 mb-6">
+                                <div class="relative overflow-hidden rounded-lg border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                                    <div class="aspect-video bg-gradient-to-br from-blue-600 to-indigo-700 p-3">
+                                        <div class="w-full h-full bg-white/10 backdrop-blur-sm rounded flex items-center justify-center">
+                                            <div class="text-center">
+                                                <div class="text-3xl mb-1">⚖️</div>
+                                                <div class="text-white text-sm font-medium">Abogados Demo</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <button onclick="window.open('categoria.html', '_blank')" class="absolute bottom-2 right-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs font-medium transition-all duration-300 active:scale-95">
+                                        Ver ejemplo
+                                    </button>
                                 </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
-                        </div>
-                        
-                        <!-- Barbería Demo -->
-                        <div class="group">
-                            <div class="relative overflow-hidden rounded-2xl shadow-2xl border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105">
-                                <div class="aspect-video bg-gradient-to-br from-blue-600 to-indigo-700 p-4">
-                                    <div class="w-full h-full bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                                        <div class="text-center">
-                                            <div class="text-4xl mb-2">✂️</div>
-                                            <div class="text-white font-semibold">Barbería Demo</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
+                            
+                            <button onclick="window.location.href='#pricing'" class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 active:scale-95">
+                                Ver detalles
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -566,54 +643,54 @@
             
             <div class="max-w-3xl mx-auto space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="faq-item bg-slate-800/50 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
-                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200">
+                <div class="faq-item bg-slate-800/50 backdrop-blur-sm rounded-xl border border-white/10 h-auto">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200 min-h-[60px]">
                         <span class="text-white font-semibold">¿Cuánto tiempo demora la creación de mi web?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
                         </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4 text-gray-300" style="max-height: 0; overflow: hidden; transition: all 0.3s ease;">
-                        <p>El tiempo de entrega varía según el plan elegido. Para el Plan Básico, entre 3-5 días hábiles. El Plan Profesional toma 7-10 días, y el Plan Premium requiere 2-3 semanas dependiendo de la complejidad.</p>
+                    <div class="faq-answer px-6 pb-4 text-gray-300 hidden">
+                        <p class="mt-2">El tiempo de entrega varía según el plan elegido. Para el Plan Básico, entre 3-5 días hábiles. El Plan Profesional toma 7-10 días, y el Plan Premium requiere 2-3 semanas dependiendo de la complejidad.</p>
                     </div>
                 </div>
                 
                 <!-- FAQ Item 2 -->
-                <div class="faq-item bg-slate-800/50 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
-                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200">
+                <div class="faq-item bg-slate-800/50 backdrop-blur-sm rounded-xl border border-white/10 h-auto">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200 min-h-[60px]">
                         <span class="text-white font-semibold">¿Incluye hosting y dominio?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3V3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
                         </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4 text-gray-300" style="max-height: 0; overflow: hidden; transition: all 0.3s ease;">
-                        <p>El precio incluye el desarrollo y diseño de la web. El hosting y dominio tienen un costo adicional mensual de $5.000, que incluye mantenimiento, actualizaciones y soporte técnico.</p>
+                    <div class="faq-answer px-6 pb-4 text-gray-300 hidden">
+                        <p class="mt-2">El precio incluye el desarrollo y diseño de la web. El hosting y dominio tienen un costo adicional mensual de $5.000, que incluye mantenimiento, actualizaciones y soporte técnico.</p>
                     </div>
                 </div>
                 
                 <!-- FAQ Item 3 -->
-                <div class="faq-item bg-slate-800/50 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
-                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200">
+                <div class="faq-item bg-slate-800/50 backdrop-blur-sm rounded-xl border border-white/10 h-auto">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200 min-h-[60px]">
                         <span class="text-white font-semibold">¿Puedo hacer cambios yo mismo?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3V3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
                         </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4 text-gray-300" style="max-height: 0; overflow: hidden; transition: all 0.3s ease;">
-                        <p>¡Sí! En los planes Profesional y Premium incluimos un panel de administración simple donde podrás actualizar textos, precios, agregar imágenes y gestionar tu contenido sin conocimientos técnicos.</p>
+                    <div class="faq-answer px-6 pb-4 text-gray-300 hidden">
+                        <p class="mt-2">¡Sí! En los planes Profesional y Premium incluimos un panel de administración simple donde podrás actualizar textos, precios, agregar imágenes y gestionar tu contenido sin conocimientos técnicos.</p>
                     </div>
                 </div>
                 
                 <!-- FAQ Item 4 -->
-                <div class="faq-item bg-slate-800/50 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
-                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200">
+                <div class="faq-item bg-slate-800/50 backdrop-blur-sm rounded-xl border border-white/10 h-auto">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200 min-h-[60px]">
                         <span class="text-white font-semibold">¿Qué métodos de pago aceptan?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3V3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
                         </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4 text-gray-300" style="max-height: 0; overflow: hidden; transition: all 0.3s ease;">
-                        <p>Aceptamos transferencia bancaria, Mercado Pago, efectivo (para clientes en CABA) y criptomonedas. El 50% se paga al iniciar el proyecto y el 50% al finalizar.</p>
+                    <div class="faq-answer px-6 pb-4 text-gray-300 hidden">
+                        <p class="mt-2">Aceptamos transferencia bancaria, Mercado Pago, efectivo (para clientes en CABA) y criptomonedas. El 50% se paga al iniciar el proyecto y el 50% al finalizar.</p>
                     </div>
                 </div>
             </div>
@@ -761,5 +838,13 @@
             elementsToAnimate.forEach(el => observer.observe(el));
         });
     </script>
+    
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491170983414?text=¡Hola!%20Vi%20tu%20página%20web%20y%20me%20gustaría%20saber%20más%20sobre%20tus%20servicios." 
+       class="fixed bottom-6 right-6 z-[9999] w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.89-11.893A11.821 11.821 0 0020.465 3.488"/>
+        </svg>
+    </a>
 </body>
 </html>

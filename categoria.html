@@ -3,252 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categoría - Página Genérica</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Estudio Jurídico & Asociados | Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        steel: {
+                            500: '#64748b',
+                            600: '#475569',
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body class="dark-mode">
+<body class="bg-slate-950 text-white font-body">
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-left">
-                <div class="logo">
-                    <span class="logo-text">TuWeb</span>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-sm border-b border-amber-500/20">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-heading font-bold text-amber-500">
+                        García & Asociados
+                    </div>
                 </div>
-            </div>
-            <div class="nav-right">
-                <a href="index.html#pricing" class="nav-link">Precios</a>
-                <a href="index.html#faq" class="nav-link">FAQ</a>
-                <a href="index.html#contact" class="nav-link">Contacto</a>
-                <a href="https://wa.me/5491170983414?text=Hola%20estoy%20interesado%20en%20sus%20servicios" class="whatsapp-btn" target="_blank">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-1.03-.246-.141-.547-.048-.746.165-.199.213-.537.447-.637.665-.099.218-.218.447-.218.637 0 .848.672 1.537 1.5 1.537.828 0 1.5-.689 1.5-1.537 0-.19-.019-.419-.218-.637-.09-.218-.438-.447-.637-.665-.199-.149-.5-.306-.746-.165-.246.163-.449.881-.203 1.03.149.272.163.733.867 2.03 1.03.246.141.547.048.746-.165.199-.213.537-.447.637-.665.099-.218.218-.447.218-.637 0-.848-.672-1.537-1.5-1.537-.828 0-1.5.689-1.5 1.537 0 .19.019.419.218.637.09.218.438.447.637.665.199.149.5.306.746.165.246-.163.449-.881.203-1.03-.149-.272-.163-.733-.867-2.03-1.03-.246-.141-.547-.048-.746.165-.199.213-.537.447-.637.665-.099.218-.218.447-.218.637 0 .848.672 1.537 1.5 1.537.828 0 1.5-.689 1.5-1.537z"/>
-                        <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
-                    </svg>
-                    WhatsApp
-                </a>
-                <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </svg>
-                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                </button>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#especialidades" class="text-gray-300 hover:text-amber-500 transition-colors">Especialidades</a>
+                    <a href="#confianza" class="text-gray-300 hover:text-amber-500 transition-colors">Por qué elegirnos</a>
+                    <a href="#contacto" class="text-gray-300 hover:text-amber-500 transition-colors">Contacto</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://wa.me/5491170983414?text=Hola%20estoy%20interesado%20en%20sus%20servicios%20legales" 
+                       class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 active:scale-95"
+                       target="_blank">
+                        Consulta Urgente
+                    </a>
+                    <button class="md:hidden text-gray-300 hover:text-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="category-hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 id="category-title">Categoría</h1>
-            <p id="category-description">Descripción de la categoría</p>
-            <div class="hero-cta">
-                <button class="hero-btn primary" onclick="scrollToProducts()">Ver Productos</button>
-                <button class="hero-btn secondary" onclick="scrollToContact()">Contactar</button>
+    <!-- Hero -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1589829545856-d251c1609a66?w=1920&h=1080&fit=crop&crop=entropy&auto=format" 
+                 alt="Biblioteca legal moderna" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/90 to-slate-950/95"></div>
+        </div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-steel-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4 text-center pt-24 md:pt-16">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 animate-fade-in">
+                    <span class="text-amber-500">Defensa Legal Integral</span>
+                    <br>
+                    <span class="text-white">& Resultados</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto animate-slide-up">
+                    Más de 25 años de trayectoria defending los intereses de nuestros clientes con el máximo compromiso profesional y ético
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style="animation-delay: 0.2s;">
+                    <a href="#contacto" class="bg-amber-500 hover:bg-amber-600 text-white px-12 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/25 active:scale-95 min-w-[200px] text-center">
+                        Solicitar Consulta
+                    </a>
+                    <a href="#especialidades" class="border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white px-12 py-4 rounded-full font-semibold text-lg transition-all duration-300 active:scale-95 min-w-[200px] text-center">
+                        Ver Especialidades
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="category-main">
-        <div class="container">
-            <!-- Products Grid -->
-            <section class="products-section" id="products">
-                <h2 class="section-title">Nuestros Productos y Servicios</h2>
-                <div class="products-grid" id="products-grid">
-                    <!-- Los productos se cargarán dinámicamente -->
-                </div>
-            </section>
-
-            <!-- Features Section -->
-            <section class="features-section">
-                <h2 class="section-title">Características Principales</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h3>Diseño Profesional</h3>
-                        <p>Interfaces modernas y optimizadas para convertir visitantes en clientes.</p>
+    <!-- Especialidades -->
+    <section id="especialidades" class="py-16 md:py-24 lg:py-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900"></div>
+        
+        <div class="relative z-10 container mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold mb-4 md:mb-6">
+                    <span class="text-amber-500">Áreas de Práctica</span>
+                </h2>
+                <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+                    Especialistas en las principales ramas del derecho para ofrecer soluciones integrales
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+                <!-- Derecho Civil -->
+                <div class="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-amber-500/20 p-8 text-center hover:border-amber-500/40 transition-all duration-300">
+                    <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📱</div>
-                        <h3>100% Responsive</h3>
-                        <p>Perfecta visualización en todos los dispositivos y tamaños de pantalla.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Rendimiento Óptimo</h3>
-                        <p>Carga rápida y navegación fluida para la mejor experiencia.</p>
-                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho Civil</h3>
+                    <p class="text-gray-300 text-sm">
+                        Contratos, responsabilidades, daños y perjuicios. Defensa integral de sus derechos patrimoniales.
+                    </p>
                 </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="corporate-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#products">Productos</a></li>
-                        <li><a href="#features">Características</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><a href="tel:+5491170983414">+54 9 1170983414</a></li>
-                        <li><a href="mailto:info@tuweb.com">info@tuweb.com</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Redes</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">LinkedIn</a>
+                
+                <!-- Derecho Laboral -->
+                <div class="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-amber-500/20 p-8 text-center hover:border-amber-500/40 transition-all duration-300">
+                    <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
                     </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho Laboral</h3>
+                    <p class="text-gray-300 text-sm">
+                        Despidos, accidentes laborales, convenios colectivos. Protección completa del trabajador.
+                    </p>
+                </div>
+                
+                <!-- Derecho Comercial -->
+                <div class="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-amber-500/20 p-8 text-center hover:border-amber-500/40 transition-all duration-300">
+                    <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho Comercial</h3>
+                    <p class="text-gray-300 text-sm">
+                        Sociedades, contratos mercantiles, reestructuraciones. Asesoramiento estratégico empresarial.
+                    </p>
+                </div>
+                
+                <!-- Derecho de Familia -->
+                <div class="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-amber-500/20 p-8 text-center hover:border-amber-500/40 transition-all duration-300">
+                    <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho de Familia</h3>
+                    <p class="text-gray-300 text-sm">
+                        Divorcios, sucesiones, alimentos, tenencia. Soluciones sensibles para asuntos familiares.
+                    </p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 TuWeb. Todos los derechos reservados.</p>
+        </div>
+    </section>
+
+    <!-- Confianza -->
+    <section id="confianza" class="py-16 md:py-24 lg:py-32 relative">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1511795406832-402c9bf9a8a2?w=1920&h=1080&fit=crop&crop=entropy&auto=format" 
+                 alt="Oficina legal moderna con gente de traje" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/90 to-slate-950/95"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold mb-4 md:mb-6">
+                    <span class="text-amber-500">Por qué elegirnos</span>
+                </h2>
+                <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+                    La confianza de nuestros clientes es nuestro mayor activo
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+                <!-- Experiencia -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">25+ Años de Experiencia</h3>
+                    <p class="text-gray-300">
+                        Trayectoria consolidada en los juzgados de todo el país
+                    </p>
+                </div>
+                
+                <!-- Ética -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ética Inquebrantable</h3>
+                    <p class="text-gray-300">
+                        Principios morales y profesionales en cada caso que asumimos
+                    </p>
+                </div>
+                
+                <!-- Resultados -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Resultados Comprobados</h3>
+                    <p class="text-gray-300">
+                        Más del 90% de casos resueltos favorablemente para nuestros clientes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 md:py-24 lg:py-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900"></div>
+        
+        <div class="relative z-10 container mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold mb-4 md:mb-6">
+                    <span class="text-amber-500">Contacto</span>
+                </h2>
+                <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+                    Inicie su consulta hoy mismo. La primera evaluación es sin costo.
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-amber-500/20 p-6 md:p-8">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-300 mb-2">Nombre completo</label>
+                                <input type="text" class="w-full bg-slate-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors" placeholder="Juan Pérez">
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 mb-2">Teléfono</label>
+                                <input type="tel" class="w-full bg-slate-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors" placeholder="+54 11 1234-5678">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-300 mb-2">Email</label>
+                            <input type="email" class="w-full bg-slate-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors" placeholder="email@ejemplo.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-300 mb-2">Asunto</label>
+                            <select class="w-full bg-slate-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                <option value="">Seleccione un área</option>
+                                <option value="civil">Derecho Civil</option>
+                                <option value="laboral">Derecho Laboral</option>
+                                <option value="comercial">Derecho Comercial</option>
+                                <option value="familia">Derecho de Familia</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-300 mb-2">Mensaje</label>
+                            <textarea rows="4" class="w-full bg-slate-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors resize-none" placeholder="Describa brevemente su caso..."></textarea>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button type="submit" class="flex-1 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 active:scale-95">
+                                Enviar Consulta
+                            </button>
+                            <a href="https://wa.me/5491170983414?text=Hola%20estoy%20interesado%20en%20una%20consulta%20legal%20urgente" 
+                               class="flex-1 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 active:scale-95 text-center flex items-center justify-center"
+                               target="_blank">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.89-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                </svg>
+                                Consulta Urgente
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-amber-500/20 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-2xl font-heading font-bold text-amber-500 mb-4">García & Asociados</h3>
+                <p class="text-gray-400 mb-6">Estudio Jurídico de Élite</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="tel:+5491170983414" class="text-gray-400 hover:text-amber-500 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:contacto@garciaasociados.com" class="text-gray-400 hover:text-amber-500 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/5491170983414" class="text-gray-400 hover:text-amber-500 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.89-11.893A11.821 11.821 0 0020.465 3.488"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="text-gray-500 text-sm">
+                    © 2024 García & Asociados. Todos los derechos reservados.
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Datos dinámicos de categorías
-        const categoryData = {
-            'pizzeria': {
-                titulo: 'Soluciones para Pizzerías',
-                descripcion: 'Plataformas digitales especializadas para pizzerías que quieren aumentar sus ventas online',
-                imagenHero: 'https://images.unsplash.com/photo-1565299624946-b28f40a9ae91?w=1200',
-                productos: [
-                    { nombre: 'Sistema de Pedidos Online', precio: '$80.000', descripcion: 'Recibe pedidos directamente desde tu página' },
-                    { nombre: 'Menú Digital Interactivo', precio: '$110.000', descripcion: 'Menú atractivo con fotos y precios actualizados' },
-                    { nombre: 'Delivery Tracker', precio: '$150.000', descripcion: 'Seguimiento en tiempo real de entregas' }
-                ]
-            },
-            'gimnasio': {
-                titulo: 'Plataformas para Gimnasios',
-                descripcion: 'Sistemas completos para gestión de gimnasios y centros de fitness',
-                imagenHero: 'https://images.unsplash.com/photo-1571902943206-507026980067?w=1200',
-                productos: [
-                    { nombre: 'Sistema de Membresías', precio: '$80.000', descripcion: 'Gestión completa de membresías y pagos' },
-                    { nombre: 'Reserva de Clases', precio: '$110.000', descripcion: 'Sistema de reservas online para clases' },
-                    { nombre: 'App Móvil', precio: '$150.000', descripcion: 'Aplicación móvil para tus miembros' }
-                ]
-            },
-            'peluqueria': {
-                titulo: 'Soluciones para Peluquerías',
-                descripcion: 'Plataformas digitales diseñadas específicamente para peluquerías y salones de belleza',
-                imagenHero: 'https://images.unsplash.com/photo-1560069000270-5e5352893280?w=1200',
-                productos: [
-                    { nombre: 'Sistema de Turnos', precio: '$80.000', descripcion: 'Gestión de turnos y citas online' },
-                    { nombre: 'Galería de Servicios', precio: '$110.000', descripcion: 'Catálogo visual de todos tus servicios' },
-                    { nombre: 'Recordatorios SMS', precio: '$150.000', descripcion: 'Sistema automático de recordatorios' }
-                ]
-            }
+        // Smooth scroll para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animaciones al scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
-        // Obtener ID de la URL
-        function getCategoryFromURL() {
-            const path = window.location.pathname;
-            const match = path.match(/categoria\/([^\/]+)/);
-            return match ? match[1] : null;
-        }
-
-        // Cargar datos de la categoría
-        function loadCategoryData() {
-            const categoryId = getCategoryFromURL();
-            const category = categoryData[categoryId];
-            
-            if (category) {
-                // Actualizar título y descripción
-                document.getElementById('category-title').textContent = category.titulo;
-                document.getElementById('category-description').textContent = category.descripcion;
-                
-                // Actualizar imagen de hero
-                const heroSection = document.querySelector('.category-hero');
-                if (heroSection) {
-                    heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${category.imagenHero}')`;
-                    heroSection.style.backgroundSize = 'cover';
-                    heroSection.style.backgroundPosition = 'center';
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
                 }
-                
-                // Cargar productos
-                loadProducts(category.productos);
-            }
-        }
-
-        // Cargar productos dinámicamente
-        function loadProducts(productos) {
-            const grid = document.getElementById('products-grid');
-            grid.innerHTML = '';
-            
-            productos.forEach(producto => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400" alt="${producto.nombre}">
-                    </div>
-                    <div class="product-content">
-                        <h3>${producto.nombre}</h3>
-                        <p>${producto.descripcion}</p>
-                        <div class="product-price">${producto.precio}</div>
-                        <button class="product-cta" onclick="redirectToWhatsApp('${producto.nombre}')">Consultar</button>
-                    </div>
-                `;
-                grid.appendChild(card);
             });
-        }
+        }, observerOptions);
 
-        // Funciones de navegación
-        function scrollToProducts() {
-            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function scrollToContact() {
-            document.querySelector('.corporate-footer').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function redirectToWhatsApp(producto) {
-            const message = `Hola, estoy interesado en: ${producto}`;
-            window.open(`https://wa.me/5491170983414?text=${encodeURIComponent(message)}`, '_blank');
-        }
-
-        // Dark mode toggle
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-        }
-
-        // Inicialización
         document.addEventListener('DOMContentLoaded', function() {
-            // Cargar preferencia de dark mode
-            const darkMode = localStorage.getItem('darkMode');
-            if (darkMode === 'true') {
-                document.body.classList.add('dark-mode');
-            }
-            
-            // Cargar datos de categoría
-            loadCategoryData();
+            const elementsToAnimate = document.querySelectorAll('section');
+            elementsToAnimate.forEach(el => observer.observe(el));
         });
     </script>
 </body>
