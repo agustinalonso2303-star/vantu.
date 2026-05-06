@@ -3,430 +3,683 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbería Urbana - Flow de Barrio</title>
+    <title>Urban Style Barbería - Corte y Estilo Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="barberia.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'rajdhani': ['Rajdhani', 'sans-serif'],
+                        'oswald': ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        'urban': {
+                            '50': '#f8f9fa',
+                            '100': '#e9ecef',
+                            '200': '#dee2e6',
+                            '300': '#ced4da',
+                            '400': '#adb5bd',
+                            '500': '#6c757d',
+                            '600': '#495057',
+                            '700': '#343a40',
+                            '800': '#212529',
+                            '900': '#000000',
+                        },
+                        'professional': {
+                            '50': '#1a1a1a',
+                            '100': '#2d2d2d',
+                            '200': '#404040',
+                            '300': '#595959',
+                            '400': '#737373',
+                            '500': '#8b8b8b',
+                            '600': '#a3a3a3',
+                            '700': '#b8b8b8',
+                            '800': '#d9d9d9',
+                            '900': '#ffffff',
+                        },
+                        'accent': {
+                            '50': '#8B4513',
+                            '100': '#A0522D',
+                            '200': '#CD853F',
+                            '300': '#DEB887',
+                            '400': '#F4A460',
+                            '500': '#FF6347',
+                            '600': '#FF7F50',
+                            '700': '#FFA500',
+                            '800': '#FFD700',
+                            '900': '#FFFF00',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes professional-float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes subtle-glow {
+            0%, 100% { 
+                box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
+            }
+            50% { 
+                box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
+            }
+        }
+        
+        .professional-float {
+            animation: professional-float 4s ease-in-out infinite;
+        }
+        
+        .subtle-border {
+            border: 2px solid rgba(139, 69, 19, 0.3);
+            box-shadow: 0 0 10px rgba(139, 69, 19, 0.2);
+        }
+        
+        .professional-card {
+            background: linear-gradient(135deg, rgba(26,26,26,0.98) 0%, rgba(45,45,45,0.98) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 69, 19, 0.2);
+        }
+        
+        .professional-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 25%, #404040 50%, #595959 75%, #737373 100%);
+        }
+        
+        .badge-style {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        .premium-accent {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo-container">
-                <div class="logo">🔥 URBAN CUTS</div>
-                <div class="tagline">Flow de Barrio</div>
+<body class="bg-urban-50 text-urban-900 min-h-screen professional-bg">
+    <!-- Header Profesional -->
+    <header class="fixed top-0 w-full z-50 bg-urban-900/98 backdrop-blur-xl border-b border-accent-500/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo Profesional -->
+                <div class="flex items-center space-x-4">
+                    <div class="text-3xl professional-float">💈</div>
+                    <div class="relative">
+                        <h1 class="text-3xl font-bold font-oswald uppercase tracking-wide text-white">Urban Style</h1>
+                        <p class="text-accent-400 text-sm font-semibold font-rajdhani tracking-wide">Barbería Profesional</p>
+                    </div>
+                </div>
+                
+                <!-- Navegación Desktop -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <ul class="flex space-x-6">
+                        <li><a href="#inicio" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Servicios</a></li>
+                        <li><a href="#equipo" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Equipo</a></li>
+                        <li><a href="#galeria" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Galería</a></li>
+                        <li><a href="#contacto" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Contacto</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Botón de Acción Principal -->
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20una%20consulta" 
+                       target="_blank"
+                       class="bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-lg font-semibold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 subtle-glow">
+                        📱 Agendar Cita
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-3 rounded-lg bg-accent-500 hover:bg-accent-600 transition-colors">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#cortes">Cortes</a></li>
-                <li><a href="#merch">Merch</a></li>
-                <li><a href="#resenas">Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <button class="demo-premium-btn" onclick="toggleDemo()">Demo Premium</button>
-        </nav>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t border-accent-500/20 pt-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#inicio" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Servicios</a>
+                    <a href="#equipo" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Equipo</a>
+                    <a href="#galeria" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Galería</a>
+                    <a href="#contacto" class="text-white hover:text-accent-400 font-semibold font-oswald uppercase tracking-wide transition-colors">Contacto</a>
+                    <div class="pt-4">
+                        <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20una%20consulta" 
+                           target="_blank"
+                           class="bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-lg font-semibold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 subtle-glow text-center block">
+                            📱 Agendar Cita
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="inicio">
-            <div class="hero">
-                <div class="hero-content">
-                    <h1 class="main-title">URBAN CUTS</h1>
-                    <p class="subtitle">Donde el Flow se Encuentra con la Calle</p>
-                    <p class="hero-description">Cortes de alta calidad con estilo urbano. Más que una barbería, es cultura de barrio.</p>
-                    <div class="biografia">
-                        <p>Urban Cuts nació en 2018 como un sueño compartido entre tres amigos apasionados por el arte del cabello y la cultura urbana. Lo que comenzó como un pequeño local en el corazón del barrio, pronto se convirtió en un referente para quienes buscan más que un corte: buscan identidad, estilo y comunidad. Hoy, Urban Cuts no es solo una barbería, es un punto de encuentro donde el flow de la calle se transforma en arte.</p>
+    <!-- Hero Section Profesional -->
+    <main class="pt-20">
+        <section id="inicio" class="min-h-screen flex items-center relative overflow-hidden">
+            <!-- Background Profesional -->
+            <div class="absolute inset-0 bg-gradient-to-br from-urban-900/90 via-urban-800/80 to-urban-700/70"></div>
+            
+            <!-- Elementos sutiles -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-20 left-10 text-6xl professional-float">💈</div>
+                <div class="absolute top-1/3 right-20 text-5xl professional-float" style="animation-delay: 0.5s;">✂️</div>
+                <div class="absolute bottom-20 left-1/4 text-6xl professional-float" style="animation-delay: 1s;">🧴</div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Hero Content -->
+                    <div class="text-center lg:text-left">
+                        <!-- Badges profesionales -->
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+                            <span class="badge-style px-4 py-2 rounded-full text-sm font-semibold">
+                                🏆 Profesional Certificado
+                            </span>
+                            <span class="premium-accent px-4 py-2 rounded-full text-sm font-bold">
+                                ⭐ 5.0 Estrellas
+                            </span>
+                            <span class="badge-style px-4 py-2 rounded-full text-sm font-semibold">
+                                💼 Experiencia 10+ Años
+                            </span>
+                        </div>
+                        
+                        <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-oswald uppercase tracking-wide">
+                            Barbería<br>
+                            <span class="text-accent-400">Profesional</span>
+                        </h2>
+                        
+                        <p class="text-xl md:text-2xl text-urban-200 mb-8 leading-relaxed font-rajdhani font-medium">
+                            Excelencia en corte masculino con técnicas avanzadas y productos premium. Tu estilo, nuestra especialidad.
+                        </p>
+                        
+                        <!-- Call to Actions Profesionales -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20una%20consulta" 
+                               target="_blank"
+                               class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-lg font-bold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 subtle-glow flex items-center justify-center space-x-3">
+                                <span>📱</span>
+                                <span>Agendar Consulta</span>
+                            </a>
+                            <a href="#servicios" 
+                               class="bg-urban-800 hover:bg-urban-700 text-accent-400 px-8 py-4 rounded-lg font-bold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 border border-accent-500/30 flex items-center justify-center space-x-3">
+                                <span>📋</span>
+                                <span>Ver Servicios</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="cta-buttons" style="display: none;">
-                        <a href="https://wa.me/5491130112155?text=¡Hola!%20Vi%20tu%20página%20web%20y%20quiero%20agendar%20un%20turno%20en%20Urban%20Cuts." class="cta-button primary" target="_blank">Agendar Turno</a>
-                        <a href="#servicios" class="cta-button secondary">Ver Servicios</a>
-                    </div>
-                </div>
+                    
+                    <!-- Hero Visual Profesional -->
+                    <div class="relative">
+                        <div class="professional-card rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-300 subtle-border">
+                            <div class="aspect-square bg-gradient-to-br from-accent-400/20 to-accent-600/20 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden">
+                                <!-- Elementos decorativos -->
+                                <div class="absolute top-4 right-4">
+                                    <span class="premium-accent px-3 py-1 rounded text-xs font-bold">
+                                        PREMIUM
+                                    </span>
+                                </div>
+                                
+                                <!-- Contenido principal -->
+                                <div class="text-center z-10">
+                                    <div class="text-8xl mb-4 professional-float">💈</div>
+                                    <h3 class="text-2xl font-bold text-accent-400 mb-2 font-oswald uppercase tracking-wide">Corte Ejecutivo</h3>
+                                    <p class="text-urban-200 font-semibold font-rajdhani mb-4">Servicio Premium</p>
+                                    <div class="text-4xl font-bold text-white font-oswald">$24.99</div>
+                                </div>
                             </div>
-        </section>
-
-        <section id="servicios">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">✂️</div>
-                    <h3>Corte Clásico</h3>
-                    <p>Corte tradicional con técnica profesional</p>
-                    <div class="price">$15.00</div>
-                    <ul class="service-details">
-                        <li>Degradado perfecto</li>
-                        <li>Detalles precisos</li>
-                        <li>Finalizado con producto</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Diseño Urbano</h3>
-                    <p>Arte y creatividad en tu cabello</p>
-                    <div class="price">$25.00</div>
-                    <ul class="service-details">
-                        <li>Diseños personalizados</li>
-                        <li>Técnicas de fade</li>
-                        <li>Estilo único</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧔</div>
-                    <h3>Barba Completa</h3>
-                    <p>Cuidado profesional de barba</p>
-                    <div class="price">$20.00</div>
-                    <ul class="service-details">
-                        <li>Recorte y perfilado</li>
-                        <li>Aplicación de hot towel</li>
-                        <li>Aceites esenciales</li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="cortes">
-            <h2 class="section-title">Catálogo de Cortes</h2>
-            <div class="cuts-gallery">
-                <div class="cut-item">
-                    <div class="cut-image">
-                        <div class="image-placeholder">✂️ Fade Clásico</div>
-                    </div>
-                    <h3>Fade Clásico</h3>
-                    <p>Degradado suave y elegante</p>
-                    <span class="cut-price">$15</span>
+        <!-- Servicios Profesionales -->
+        <section id="servicios" class="py-24 bg-urban-800/30">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-oswald uppercase tracking-wide">
+                        Nuestros<br>
+                        <span class="text-accent-400">Servicios</span>
+                    </h2>
+                    <p class="text-xl text-urban-200 max-w-3xl mx-auto font-rajdhani font-medium">
+                        Tratamientos profesionales con técnicas avanzadas
+                    </p>
                 </div>
-                <div class="cut-item">
-                    <div class="cut-image">
-                        <div class="image-placeholder">💈 Undercut</div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Servicio 1 -->
+                    <div class="professional-card rounded-2xl p-6 hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center">
+                                <span class="text-3xl">💈</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-accent-400 font-oswald uppercase tracking-wide">Corte Clásico</h3>
+                            <p class="text-urban-300 font-rajdhani mb-2">Técnica tradicional</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white font-oswald">$12.99</div>
+                            <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20un%20Corte%20Clásico" 
+                               target="_blank"
+                               class="mt-4 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-lg font-semibold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 subtle-glow inline-block w-full">
+                                Agendar
+                            </a>
+                        </div>
                     </div>
-                    <h3>Undercut Urbano</h3>
-                    <p>Estilo moderno y audaz</p>
-                    <span class="cut-price">$18</span>
-                </div>
-                <div class="cut-item">
-                    <div class="cut-image">
-                        <div class="image-placeholder">🔥 Mohawk</div>
+                    
+                    <!-- Servicio 2 -->
+                    <div class="professional-card rounded-2xl p-6 hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center">
+                                <span class="text-3xl">⚡</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-accent-400 font-oswald uppercase tracking-wide">Fade Moderno</h3>
+                            <p class="text-urban-300 font-rajdhani mb-2">Degradado preciso</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white font-oswald">$15.99</div>
+                            <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20un%20Fade%20Moderno" 
+                               target="_blank"
+                               class="mt-4 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-lg font-semibold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 subtle-glow inline-block w-full">
+                                Agendar
+                            </a>
+                        </div>
                     </div>
-                    <h3>Mohawk Street</h3>
-                    <p>Para los más atrevidos</p>
-                    <span class="cut-price">$22</span>
-                </div>
-                <div class="cut-item">
-                    <div class="cut-image">
-                        <div class="image-placeholder">🔗 Dreadlocks</div>
+                    
+                    <!-- Servicio 3 -->
+                    <div class="professional-card rounded-2xl p-6 hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center">
+                                <span class="text-3xl">🎨</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-accent-400 font-oswald uppercase tracking-wide">Diseño Personalizado</h3>
+                            <p class="text-urban-300 font-rajdhani mb-2">Arte exclusivo</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white font-oswald">$18.99</div>
+                            <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20un%20Diseño%20Personalizado" 
+                               target="_blank"
+                               class="mt-4 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-lg font-semibold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 subtle-glow inline-block w-full">
+                                Agendar
+                            </a>
+                        </div>
                     </div>
-                    <h3>Dreads Style</h3>
-                    <p>Mantenimiento y estilo</p>
-                    <span class="cut-price">$25</span>
-                </div>
-                <div class="cut-item">
-                    <div class="cut-image">
-                        <div class="image-placeholder">⚙️ Crew Cut</div>
+                    
+                    <!-- Servicio 4 -->
+                    <div class="professional-card rounded-2xl p-6 hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center">
+                                <span class="text-3xl">🔥</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-accent-400 font-oswald uppercase tracking-wide">Servicio Premium</h3>
+                            <p class="text-urban-300 font-rajdhani mb-2">Tratamiento completo</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white font-oswald">$24.99</div>
+                            <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20un%20Servicio%20Premium" 
+                               target="_blank"
+                               class="mt-4 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-lg font-semibold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 subtle-glow inline-block w-full">
+                                Agendar
+                            </a>
+                        </div>
                     </div>
-                    <h3>Crew Cut Pro</h3>
-                    <p>Clásico militar moderno</p>
-                    <span class="cut-price">$12</span>
-                </div>
-                <div class="cut-item">
-                    <div class="cut-image">
-                        <div class="image-placeholder">Line Up</div>
-                    </div>
-                    <h3>Line Up Perfect</h3>
-                    <p>Líneas perfectas y definidas</p>
-                    <span class="cut-price">$10</span>
                 </div>
             </div>
         </section>
 
-        <section id="merch">
-            <h2 class="section-title">Urban Merch</h2>
-            <div class="merch-grid">
-                <div class="merch-item">
-                    <div class="merch-image">
-                        <div class="image-placeholder">🧢 Gorra Urban</div>
-                    </div>
-                    <h3>Gorra Urban Cuts</h3>
-                    <p>Estilo exclusivo de la barbería</p>
-                    <div class="merch-price">$25.00</div>
-                    <button class="merch-btn">Comprar</button>
+        <!-- Equipo Profesional -->
+        <section id="equipo" class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-oswald uppercase tracking-wide">
+                        Nuestro<br>
+                        <span class="text-accent-400">Equipo</span>
+                    </h2>
+                    <p class="text-xl text-urban-200 max-w-3xl mx-auto font-rajdhani font-medium">
+                        Profesionales certificados con amplia experiencia
+                    </p>
                 </div>
-                <div class="merch-item">
-                    <div class="merch-image">
-                        <div class="image-placeholder">👕 Camiseta</div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Profesional 1 -->
+                    <div class="professional-card rounded-2xl p-8 hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="text-center">
+                            <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center">
+                                <span class="text-5xl">👨‍💼</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent-400 mb-2 font-oswald uppercase tracking-wide">Alex Martínez</h3>
+                            <p class="text-urban-300 font-bold font-rajdhani mb-4">Barber Principal</p>
+                            <div class="flex justify-center space-x-2 mb-4">
+                                <span class="badge-style px-3 py-1 rounded text-xs font-semibold">10+ Años</span>
+                                <span class="premium-accent px-3 py-1 rounded text-xs font-bold">CERTIFICADO</span>
+                            </div>
+                            <p class="text-urban-200 font-rajdhani">Especialista en técnicas avanzadas y cortes ejecutivos</p>
+                        </div>
                     </div>
-                    <h3>Camiseta Flow</h3>
-                    <p>100% algodón, diseño urbano</p>
-                    <div class="merch-price">$30.00</div>
-                    <button class="merch-btn">Comprar</button>
-                </div>
-                <div class="merch-item">
-                    <div class="merch-image">
-                        <div class="image-placeholder">🧥 Sudadera</div>
+                    
+                    <!-- Profesional 2 -->
+                    <div class="professional-card rounded-2xl p-8 hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="text-center">
+                            <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center">
+                                <span class="text-5xl">👨‍🎨</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent-400 mb-2 font-oswald uppercase tracking-wide">Carlos Rodríguez</h3>
+                            <p class="text-urban-300 font-bold font-rajdhani mb-4">Especialista en Fade</p>
+                            <div class="flex justify-center space-x-2 mb-4">
+                                <span class="badge-style px-3 py-1 rounded text-xs font-semibold">8+ Años</span>
+                                <span class="premium-accent px-3 py-1 rounded text-xs font-bold">EXPERTO</span>
+                            </div>
+                            <p class="text-urban-200 font-rajdhani">Maestro en degradados y técnicas modernas</p>
+                        </div>
                     </div>
-                    <h3>Sudadera Premium</h3>
-                    <p>Edición limitada</p>
-                    <div class="merch-price">$45.00</div>
-                    <button class="merch-btn">Comprar</button>
-                </div>
-                <div class="merch-item">
-                    <div class="merch-image">
-                        <div class="image-placeholder">🧢 Gorros</div>
+                    
+                    <!-- Profesional 3 -->
+                    <div class="professional-card rounded-2xl p-8 hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="text-center">
+                            <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center">
+                                <span class="text-5xl">👨‍🔧</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent-400 mb-2 font-oswald uppercase tracking-wide">Mike Sánchez</h3>
+                            <p class="text-urban-300 font-bold font-rajdhani mb-4">Diseñador Senior</p>
+                            <div class="flex justify-center space-x-2 mb-4">
+                                <span class="badge-style px-3 py-1 rounded text-xs font-semibold">12+ Años</span>
+                                <span class="premium-accent px-3 py-1 rounded text-xs font-bold">MASTER</span>
+                            </div>
+                            <p class="text-urban-200 font-rajdhani">Creatividad y precisión en cada diseño</p>
+                        </div>
                     </div>
-                    <h3>Gorro Beanie</h3>
-                    <p>Calidez y estilo urbano</p>
-                    <div class="merch-price">$20.00</div>
-                    <button class="merch-btn">Comprar</button>
                 </div>
             </div>
         </section>
 
-        <section id="resenas">
-            <h2 class="section-title">⭐ Lo Que Dicen los Clientes</h2>
-            <div class="reviews-carousel">
-                <div class="review-card active">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"La mejor barbería de la zona. Excelente servicio y muy buen ambiente urbano. ¡Totalmente recomendado!"</p>
-                    <div class="review-author">- Carlos M.</div>
-                    <div class="review-date">Hace 2 días</div>
+        <!-- Galería Profesional -->
+        <section id="galeria" class="py-24 bg-urban-800/30">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-oswald uppercase tracking-wide">
+                        Nuestro<br>
+                        <span class="text-accent-400">Trabajo</span>
+                    </h2>
+                    <p class="text-xl text-urban-200 max-w-3xl mx-auto font-rajdhani font-medium">
+                        Resultados que hablan por sí mismos
+                    </p>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Me hicieron un fade perfecto y el diseño que pedí. Los barberos son verdaderos artistas del cabello."</p>
-                    <div class="review-author">- Juan P.</div>
-                    <div class="review-date">Hace 1 semana</div>
+                
+                <!-- Grid de galería -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Galería Item 1 -->
+                    <div class="professional-card rounded-xl overflow-hidden hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/30 to-accent-600/30 flex items-center justify-center relative">
+                            <span class="text-6xl professional-float">💈</span>
+                            <div class="absolute top-2 right-2">
+                                <span class="premium-accent px-2 py-1 rounded text-xs font-bold">DESTACADO</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-accent-400 font-oswald uppercase tracking-wide">Corte Ejecutivo</h3>
+                            <p class="text-urban-300 text-sm font-rajdhani">Estilo profesional</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Galería Item 2 -->
+                    <div class="professional-card rounded-xl overflow-hidden hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/30 to-accent-600/30 flex items-center justify-center relative">
+                            <span class="text-6xl professional-float" style="animation-delay: 0.3s;">⚡</span>
+                            <div class="absolute top-2 right-2">
+                                <span class="badge-style px-2 py-1 rounded text-xs font-semibold">POPULAR</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-accent-400 font-oswald uppercase tracking-wide">Fade Moderno</h3>
+                            <p class="text-urban-300 text-sm font-rajdhani">Técnica avanzada</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Galería Item 3 -->
+                    <div class="professional-card rounded-xl overflow-hidden hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/30 to-accent-600/30 flex items-center justify-center relative">
+                            <span class="text-6xl professional-float" style="animation-delay: 0.6s;">🎨</span>
+                            <div class="absolute top-2 right-2">
+                                <span class="premium-accent px-2 py-1 rounded text-xs font-bold">EXCLUSIVO</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-accent-400 font-oswald uppercase tracking-wide">Diseño Personalizado</h3>
+                            <p class="text-urban-300 text-sm font-rajdhani">Arte único</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Galería Item 4 -->
+                    <div class="professional-card rounded-xl overflow-hidden hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/30 to-accent-600/30 flex items-center justify-center relative">
+                            <span class="text-6xl professional-float" style="animation-delay: 0.9s;">🔥</span>
+                            <div class="absolute top-2 right-2">
+                                <span class="badge-style px-2 py-1 rounded text-xs font-semibold">PREMIUM</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-accent-400 font-oswald uppercase tracking-wide">Servicio Completo</h3>
+                            <p class="text-urban-300 text-sm font-rajdhani">Tratamiento integral</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Galería Item 5 -->
+                    <div class="professional-card rounded-xl overflow-hidden hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/30 to-accent-600/30 flex items-center justify-center">
+                            <span class="text-6xl professional-float" style="animation-delay: 1.2s;">✂️</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-accent-400 font-oswald uppercase tracking-wide">Corte Clásico</h3>
+                            <p class="text-urban-300 text-sm font-rajdhani">Estilo tradicional</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Galería Item 6 -->
+                    <div class="professional-card rounded-xl overflow-hidden hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/30 to-accent-600/30 flex items-center justify-center">
+                            <span class="text-6xl professional-float" style="animation-delay: 1.5s;">🧴</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-accent-400 font-oswald uppercase tracking-wide">Tratamiento Capilar</h3>
+                            <p class="text-urban-300 text-sm font-rajdhani">Cuidado profesional</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Galería Item 7 -->
+                    <div class="professional-card rounded-xl overflow-hidden hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/30 to-accent-600/30 flex items-center justify-center">
+                            <span class="text-6xl professional-float" style="animation-delay: 1.8s;">🏆</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-accent-400 font-oswald uppercase tracking-wide">Estilo Ganador</h3>
+                            <p class="text-urban-300 text-sm font-rajdhani">Premiado</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Galería Item 8 -->
+                    <div class="professional-card rounded-xl overflow-hidden hover:shadow-2xl transition-all subtle-border transform hover:-translate-y-2">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/30 to-accent-600/30 flex items-center justify-center">
+                            <span class="text-6xl professional-float" style="animation-delay: 2.1s;">💎</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-accent-400 font-oswald uppercase tracking-wide">Servicio VIP</h3>
+                            <p class="text-urban-300 text-sm font-rajdhani">Exclusivo</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"El ambiente es increíble, música urbana y los barberos saben lo que hacen. Volveré seguro."</p>
-                    <div class="review-author">- Diego R.</div>
-                    <div class="review-date">Hace 3 días</div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Servicio VIP de lujo. El masaje relajante y la atención son 10/10. Vale cada centavo."</p>
-                    <div class="review-author">- Martín L.</div>
-                    <div class="review-date">Hace 5 días</div>
-                </div>
-            </div>
-            <div class="carousel-controls">
-                <button class="carousel-btn prev" onclick="changeReview(-1)">‹</button>
-                <button class="carousel-btn next" onclick="changeReview(1)">›</button>
             </div>
         </section>
 
-        <section id="contacto">
-            <h2>Visítanos</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Dirección</h3>
-                    <p>Av. Corrientes 1234, CABA</p>
+        <!-- Contacto Profesional -->
+        <section id="contacto" class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-oswald uppercase tracking-wide">
+                        Contacto<br>
+                        <span class="text-accent-400">Profesional</span>
+                    </h2>
+                    <p class="text-xl text-urban-200 max-w-3xl mx-auto font-rajdhani font-medium">
+                        Agenda tu cita con nuestros especialistas
+                    </p>
                 </div>
-                <div class="contact-item">
-                    <h3>Teléfono</h3>
-                    <p>+54 9 11 5555-1234</p>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Info de Contacto -->
+                    <div class="space-y-6">
+                        <div class="professional-card rounded-2xl p-6 subtle-border">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center">
+                                    <span class="text-2xl">📍</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-accent-400 font-oswald uppercase tracking-wide">Ubicación</h3>
+                                    <p class="text-urban-200 font-rajdhani">Rincon Chico - Pueblo, R. Caamaño 844, B1631 Pilar</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="professional-card rounded-2xl p-6 subtle-border">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center">
+                                    <span class="text-2xl">📞</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-accent-400 font-oswald uppercase tracking-wide">Teléfono</h3>
+                                    <p class="text-urban-200 font-rajdhani">+54 9 11 3011-2155</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="professional-card rounded-2xl p-6 subtle-border">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center">
+                                    <span class="text-2xl">🕐</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-accent-400 font-oswald uppercase tracking-wide">Horario</h3>
+                                    <p class="text-urban-200 font-rajdhani">Lunes a Sábado: 10:00 - 20:00</p>
+                                    <p class="text-urban-200 font-rajdhani">Domingos: 11:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Botón de Contacto Principal -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20una%20consulta" 
+                               target="_blank"
+                               class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-lg font-bold font-oswald uppercase tracking-wide transition-all transform hover:scale-105 subtle-glow flex items-center justify-center space-x-3">
+                                <span>📱</span>
+                                <span>Agendar Consulta</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mapa -->
+                    <div class="professional-card rounded-2xl shadow-xl p-8 subtle-border">
+                        <h3 class="text-2xl font-bold text-accent-400 mb-6 font-oswald uppercase tracking-wide">🗺️ Ubicación</h3>
+                        <div class="rounded-xl overflow-hidden">
+                            <iframe 
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=-58.8475%2C-34.4163%2C-58.8455%2C-34.4143&layer=mapnik&marker=-34.415283%2C-58.846475" 
+                                width="100%" 
+                                height="350" 
+                                frameborder="0" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <h3>Instagram</h3>
-                    <p>@urban_cuts_barberia</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Horario</h3>
-                    <p>Lunes a Sábado: 10:00 - 20:00</p>
-                    <p>Domingos: 11:00 - 18:00</p>
-                </div>
-            </div>
-            <div class="map-container">
-                <h3>Ubicación</h3>
-                <div class="map-wrapper">
-                    <iframe 
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.4250%2C-34.6037%2C-58.4150%2C-34.5937&layer=mapnik&marker=-34.5987%2C-58.4200" 
-                        width="100%" 
-                        height="300" 
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <p>Calle Urbana #789, Barrio Centro</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>URBAN CUTS</h3>
-                <p>Flow de Barrio</p>
-                <p>Donde el estilo urbano cobra vida</p>
+    <!-- Footer Profesional -->
+    <footer class="bg-urban-900 text-white py-12 border-t border-accent-500/20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="text-3xl professional-float">💈</div>
+                        <div>
+                            <h3 class="text-2xl font-bold font-oswald uppercase tracking-wide">Urban Style</h3>
+                            <p class="text-accent-400 font-semibold font-rajdhani">Barbería Profesional</p>
+                        </div>
+                    </div>
+                    <p class="text-urban-300 font-rajdhani">Excelencia en corte masculino profesional</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-oswald uppercase tracking-wide">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-accent-400 transition font-rajdhani">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-accent-400 transition font-rajdhani">Servicios</a></li>
+                        <li><a href="#equipo" class="hover:text-accent-400 transition font-rajdhani">Equipo</a></li>
+                        <li><a href="#contacto" class="hover:text-accent-400 transition font-rajdhani">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-oswald uppercase tracking-wide">Contacto</h3>
+                    <div class="space-y-2">
+                        <p class="text-urban-300 font-rajdhani">📱 +54 9 11 3011-2155</p>
+                        <p class="text-urban-300 font-rajdhani">📍 R. Caamaño 844, Pilar</p>
+                        <p class="text-urban-300 font-rajdhani">🕐 Lun-Sáb: 10:00-20:00</p>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#cortes">Cortes</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
+            
+            <div class="border-t border-accent-500/20 pt-8 text-center">
+                <p class="text-urban-300 font-rajdhani">&copy; 2024 Urban Style Barbería Profesional. Todos los derechos reservados.</p>
+                <p class="text-urban-400 mt-2 font-rajdhani">Servicios profesionales de barbería</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Urban Cuts Barbería. Todos los derechos reservados.</p>
-            <p>Hecho con Vantu</p>
         </div>
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/5491130112155?text=¡Hola!%20Vi%20tu%20página%20web%20y%20quiero%20agendar%20un%20turno%20en%20Urban%20Cuts." 
-       class="whatsapp-float" 
+    <!-- WhatsApp Float Button Profesional -->
+    <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20agendar%20una%20consulta" 
        target="_blank" 
-       title="Agendar por WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor">
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 z-40 subtle-glow">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.89-11.893A11.821 11.821 0 0020.465 3.488"/>
         </svg>
     </a>
 
-
     <script>
-        let currentReview = 0;
-        const reviews = document.querySelectorAll('.review-card');
-        let esModoBasico = false;
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
         
-        function showReview(index) {
-            reviews.forEach(review => review.classList.remove('active'));
-            reviews[index].classList.add('active');
-        }
-        
-        function changeReview(direction) {
-            currentReview += direction;
-            if (currentReview < 0) currentReview = reviews.length - 1;
-            if (currentReview >= reviews.length) currentReview = 0;
-            showReview(currentReview);
-        }
-        
-        // Auto-rotate reviews
-        setInterval(() => changeReview(1), 5000);
-        
-        // Función para alternar entre versiones
-        function toggleDemo() {
-            const botonDemo = document.querySelector('.demo-premium-btn');
-            
-            if (!esModoBasico) {
-                // Activar modo básico
-                mostrarDemoBasico();
-                botonDemo.textContent = 'Volver a Premium';
-                botonDemo.style.background = 'linear-gradient(135deg, #FF6B6B, #FF8E53)';
-                esModoBasico = true;
-            } else {
-                // Volver a modo premium
-                volverAPremium();
-                botonDemo.textContent = 'Demo Premium';
-                botonDemo.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
-                esModoBasico = false;
-            }
-        }
-        
-        function mostrarDemoBasico() {
-            // Ocultar TODAS las secciones completas como solicitaste
-            const seccionesAOcultar = [
-                'section[id="servicios"]',     // Sección servicios completa
-                'section[id="cortes"]',       // Sección cortes completa  
-                'section[id="merch"]',         // Sección merch completa
-                'section[id="resenas"]',       // Sección reseñas completa
-                '.cta-buttons',                // Botones CTA del hero
-                '.map-container'               // Mapa en contacto
-            ];
-            
-            seccionesAOcultar.forEach(selector => {
-                const elementos = document.querySelectorAll(selector);
-                elementos.forEach(elemento => {
-                    elemento.style.display = 'none';
-                });
-            });
-            
-            // Reorganizar elementos visuales del hero en 2x2 abajo
-            const heroVisual = document.querySelector('.hero-visual');
-            if (heroVisual) {
-                // Cambiar a grid 2x2
-                heroVisual.style.display = 'grid';
-                heroVisual.style.gridTemplateColumns = '1fr 1fr';
-                heroVisual.style.gridTemplateRows = '1fr 1fr';
-                heroVisual.style.gap = '1rem';
-                heroVisual.style.marginTop = '2rem';
-                heroVisual.style.justifyItems = 'center';
-                heroVisual.style.alignItems = 'center';
-                
-                // Eliminar TODAS las animaciones
-                const elementosGrafiti = heroVisual.querySelectorAll('.grafiti-element');
-                elementosGrafiti.forEach(elemento => {
-                    elemento.style.animation = 'none';
-                    elemento.style.transition = 'none';
-                });
-            }
-            
-            // Modificar precios a versión básica
-            const precios = document.querySelectorAll('.price, .cut-price');
-            precios.forEach(precio => {
-                const textoOriginal = precio.textContent;
-                if (textoOriginal.includes('$')) {
-                    const numero = parseFloat(textoOriginal.replace('$', '').replace(',', '.'));
-                    const precioBasico = (numero * 0.6).toFixed(2);
-                    precio.textContent = `$${precioBasico}`;
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
                 }
             });
-            
-            // Ocultar sección "Síguenos" del footer en modo básico
-            const footerSection = document.querySelector('#siguenos');
-            if (footerSection) {
-                footerSection.style.display = 'none';
-            }
-            
-            // No mostrar mensaje básico como solicitaste
-        }
-        
-        function volverAPremium() {
-            // Restaurar elementos visuales del hero a su estado original
-            const heroVisual = document.querySelector('.hero-visual');
-            if (heroVisual) {
-                // Restaurar layout original (flex)
-                heroVisual.style.display = 'flex';
-                heroVisual.style.gridTemplateColumns = '';
-                heroVisual.style.gridTemplateRows = '';
-                heroVisual.style.gap = '2rem';
-                heroVisual.style.marginTop = '3rem';
-                heroVisual.style.justifyItems = '';
-                heroVisual.style.alignItems = '';
-                
-                // Restaurar animaciones originales
-                const elementosGrafiti = heroVisual.querySelectorAll('.grafiti-element');
-                elementosGrafiti.forEach((elemento, index) => {
-                    elemento.style.animation = '';
-                    elemento.style.transition = '';
-                    // Restaurar delays originales
-                    if (index === 0) elemento.style.animationDelay = '0s';
-                    if (index === 1) elemento.style.animationDelay = '1s';
-                    if (index === 2) elemento.style.animationDelay = '2s';
-                });
-            }
-            
-            // Mostrar todas las secciones ocultas
-            const elementosOcultos = document.querySelectorAll('[style*="display: none"]');
-            elementosOcultos.forEach(elemento => {
-                elemento.style.display = '';
-            });
-            
-            // Recargar para restaurar precios y estado completo
-            location.reload();
-        }
-        
-        // Detectar si viene de una categoría premium
-        window.addEventListener('load', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const categoria = urlParams.get('cat');
-            
-            if (categoria === 'premium') {
-                // La página se carga como premium
-                console.log('Modo Premium activado');
-            }
         });
     </script>
 </body>

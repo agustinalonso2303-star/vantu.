@@ -3,357 +3,483 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mama Clara - Pizzería</title>
+    <title>Mama Clara - Pizzería Artesanal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="pizzeria.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'pizza-red': '#B50302',
+                        'pizza-dark': '#C31F20',
+                        'pizza-green': '#4CAF50',
+                        'pizza-bg': '#FFF5D2',
+                        'pizza-light': '#FFF5D2',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FFF5D2;
+            color: #B50302;
+            background-image: 
+                linear-gradient(45deg, #B50302 25%, transparent 25%),
+                linear-gradient(-45deg, #B50302 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #B50302 75%),
+                linear-gradient(-45deg, transparent 75%, #B50302 75%);
+            background-size: 40px 40px;
+            background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+            background-color: #FFF5D2;
+        }
+        
+        .pizza-pattern {
+            background-color: #B50302;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.1) 10px,
+                rgba(255, 255, 255, 0.1) 20px
+            );
+        }
+        
+        @keyframes bounce-pizza {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .pizza-float {
+            animation: bounce-pizza 3s ease-in-out infinite;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <div class="logo">Mama Clara</div>
+    <!-- Navigation -->
+    <header class="pizza-pattern text-white fixed w-full top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="text-4xl pizza-float">🍕</div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Mama Clara</h1>
+                        <p class="text-sm opacity-90">Pizzería Artesanal</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="hover:text-yellow-300 transition">Inicio</a>
+                    <a href="#carta" class="hover:text-yellow-300 transition">Carta</a>
+                    <a href="#especialidades" class="hover:text-yellow-300 transition">Especialidades</a>
+                    <a href="#contacto" class="hover:text-yellow-300 transition">Contacto</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-                <button class="demo-premium-btn" onclick="toggleDemo()">Demo Premium</button>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-white/20 pt-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#inicio" class="hover:text-yellow-300 transition">Inicio</a>
+                    <a href="#carta" class="hover:text-yellow-300 transition">Carta</a>
+                    <a href="#especialidades" class="hover:text-yellow-300 transition">Especialidades</a>
+                    <a href="#contacto" class="hover:text-yellow-300 transition">Contacto</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio">
-            <div class="hero">
-                <h1>Auténtica Pizza de Masa Madre</h1>
-                <p>Sabor tradicional en cada porción</p>
-                <a href="https://wa.me/5491130112155?text=¡Hola!%20Vi%20tu%20página%20web%20y%20me%20gustaría%20hacer%20un%20pedido." 
-       class="cta-button" 
-       target="_blank">Pide Ahora</a>
+    <!-- Hero Section -->
+    <main class="pt-20">
+        <section id="inicio" class="min-h-screen flex items-center relative overflow-hidden">
+            <!-- Pizza Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-10 left-10 text-8xl pizza-float">🍕</div>
+                <div class="absolute top-1/3 right-20 text-6xl pizza-float" style="animation-delay: 0.5s;">🍕</div>
+                <div class="absolute bottom-20 left-1/4 text-7xl pizza-float" style="animation-delay: 1s;">🍕</div>
             </div>
-        </section>
-
-        <section id="carta">
-            <h2>Nuestra Carta</h2>
-            <div class="pizza-categories">
-                <div class="category">
-                    <h3>🍕 Pizzas Clásicas</h3>
-                    <div class="pizza-items">
-                        <div class="pizza-item">
-                            <h4>Margarita</h4>
-                            <p>Salsa, mozzarella, albahaca fresca</p>
-                            <span class="price">$12.99</span>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Hero Content -->
+                    <div class="text-center md:text-left">
+                        <div class="inline-block bg-red-600 text-white px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+                            🔥 Masa Madre • 48h Fermentación
                         </div>
-                        <div class="pizza-item">
-                            <h4>Pepperoni</h4>
-                            <p>Pepperoni, mozzarella, salsa</p>
-                            <span class="price">$14.99</span>
-                        </div>
-                        <div class="pizza-item">
-                            <h4>Hawaiana</h4>
-                            <p>Jamón, piña, mozzarella</p>
-                            <span class="price">$13.99</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="category">
-                    <h3>🍕 Especialidades</h3>
-                    <div class="pizza-items">
-                        <div class="pizza-item">
-                            <h4>Quattro Stagioni</h4>
-                            <p>4 estaciones: jamón, champiñones, alcachofas, aceitunas</p>
-                            <span class="price">$16.99</span>
-                        </div>
-                        <div class="pizza-item">
-                            <h4>Carbonara</h4>
-                            <p>Huevo, panceta, parmesano, pimienta negra</p>
-                            <span class="price">$15.99</span>
-                        </div>
-                        <div class="pizza-item">
-                            <h4>Diavola</h4>
-                            <p>Salami picante, jalapeños, mozzarella</p>
-                            <span class="price">$15.99</span>
+                        <h2 class="text-5xl md:text-7xl font-bold text-red-800 mb-4 leading-tight bg-yellow-50 px-6 py-3 rounded-lg inline-block border-4 border-black">
+                            Auténtica Pizza<br>
+                            <span class="text-red-600">de Masa Madre</span>
+                        </h2>
+                        <p class="text-xl text-gray-700 mb-8 leading-relaxed bg-yellow-50 px-4 py-2 rounded-lg inline-block border-4 border-black shadow-lg">
+                            Sabor tradicional italiano en cada porción. Ingredientes premium y recetas transmitidas por generaciones.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="https://wa.me/5491130112155?text=¡Hola!%20Vi%20tu%20página%20web%20y%20me%20gustaría%20hacer%20un%20pedido." 
+                               target="_blank"
+                               class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl flex items-center justify-center space-x-2">
+                                <span>📱</span>
+                                <span>Pedir por WhatsApp</span>
+                            </a>
+                            <a href="https://www.pedidosya.com.ar/restaurantes/mama-clara-pizzeria" 
+                               target="_blank"
+                               class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl flex items-center justify-center space-x-2">
+                                <span>🛵</span>
+                                <span>Pedir por PedidosYa</span>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="category">
-                    <h3>🥤 Bebidas</h3>
-                    <div class="pizza-items">
-                        <div class="pizza-item">
-                            <h4>Refresco</h4>
-                            <p>Cola, Naranja, Limón</p>
-                            <span class="price">$2.99</span>
+                    
+                    <!-- Hero Visual -->
+                    <div class="relative">
+                        <div class="bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300">
+                            <div class="aspect-square bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-8xl mb-4 pizza-float">🍕</div>
+                                    <h3 class="text-2xl font-bold text-red-800 mb-2">Pizza del Día</h3>
+                                    <p class="text-red-600 font-semibold">Margarita Especial</p>
+                                    <p class="text-3xl font-bold text-red-700 mt-2">$16.99</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pizza-item">
-                            <h4>Agua Mineral</h4>
-                            <p>Con o sin gas</p>
-                            <span class="price">$1.99</span>
+                        
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-red-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg pizza-float">
+                            <span>30%</span>
                         </div>
-                        <div class="pizza-item">
-                            <h4>Cerveza Italiana</h4>
-                            <p>Peroni, Moretti</p>
-                            <span class="price">$4.99</span>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold shadow-lg pizza-float z-10" style="animation-delay: 1s;">
+                            <span>⭐</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="especialidades">
-            <h2>Nuestras Especialidades</h2>
-            <div class="specialty-grid">
-                <div class="specialty-item">
-                    <div class="image-placeholder">
-                        <p>Pizza del Chef</p>
-                    </div>
-                    <h4>Creación Exclusiva</h4>
-                    <p>Ingredientes seleccionados por nuestro chef</p>
-                    <span class="price">$18.99</span>
+        <!-- Menu Section -->
+        <section id="carta" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-red-800 mb-4">Nuestra Carta</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Descubre nuestras especialidades preparadas con ingredientes frescos y recetas tradicionales italianas</p>
                 </div>
-                <div class="specialty-item">
-                    <div class="image-placeholder">
-                        <p>Pizza Vegana</p>
-                    </div>
-                    <h4>Opción Vegetariana</h4>
-                    <p>Vegetales frescos y mozzarella vegana</p>
-                    <span class="price">$14.99</span>
+                
+                <!-- Menu Categories -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button onclick="showCategory('clasicas')" class="bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-all">
+                        🍕 Pizzas Clásicas
+                    </button>
+                    <button onclick="showCategory('especialidades')" class="bg-white text-red-600 border-2 border-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-50 transition-all">
+                        🌟 Especialidades
+                    </button>
+                    <button onclick="showCategory('bebidas')" class="bg-white text-red-600 border-2 border-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-50 transition-all">
+                        🥤 Bebidas
+                    </button>
                 </div>
-                <div class="specialty-item">
-                    <div class="image-placeholder">
-                        <p>Pizza Nutella</p>
+                
+                <!-- Menu Items Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Pizzas Clásicas -->
+                    <div class="menu-item bg-white border-2 border-red-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="clasicas">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🍕</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-xl text-red-800 mb-2">Margarita</h3>
+                                <p class="text-gray-600 mb-3">Salsa tomate, mozzarella fresca, albahaca</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-2xl font-bold text-red-600">$12.99</span>
+                                    <div class="flex space-x-2">
+                                        <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20pedir%20una%20Margarita" target="_blank" class="bg-green-500 text-white px-3 py-1 rounded-full text-sm hover:bg-green-600">
+                                            📱 Pedir
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h4>Postre Italiano</h4>
-                    <p>Pizza dulce con Nutella y frutas</p>
-                    <span class="price">$8.99</span>
+                    
+                    <div class="menu-item bg-white border-2 border-red-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="clasicas">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🍕</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-xl text-red-800 mb-2">Napolitana</h3>
+                                <p class="text-gray-600 mb-3">Salsa tomate, mozzarella, tomate fresco, albahaca</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-2xl font-bold text-red-600">$14.99</span>
+                                    <div class="flex space-x-2">
+                                        <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20pedir%20una%20Napolitana" target="_blank" class="bg-green-500 text-white px-3 py-1 rounded-full text-sm hover:bg-green-600">
+                                            📱 Pedir
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Especialidades -->
+                    <div class="menu-item bg-white border-2 border-red-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="especialidades">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🍕</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-xl text-red-800 mb-2">Muzzarella Especial</h3>
+                                <p class="text-gray-600 mb-3">Doble muzzarella, orégano, aceitunas negras</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-2xl font-bold text-red-600">$16.99</span>
+                                    <div class="flex space-x-2">
+                                        <a href="https://wa.me/5491130112155?text=¡Hola!%20Quiero%20pedir%20una%20Muzzarella%20Especial" target="_blank" class="bg-green-500 text-white px-3 py-1 rounded-full text-sm hover:bg-green-600">
+                                            📱 Pedir
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bebidas -->
+                    <div class="menu-item bg-white border-2 border-red-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="bebidas">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🥤</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-xl text-red-800 mb-2">Coca-Cola</h3>
+                                <p class="text-gray-600 mb-3">Lata 355ml</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-2xl font-bold text-red-600">$3.99</span>
+                                    <div class="flex space-x-2">
+                                        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Incluido</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="historia">
-            <h2>Nuestra Historia</h2>
-            <div class="historia-content">
-                <div class="historia-text">
-                    <p>Mama Clara nació del sueño de llevar el sabor auténtico de Italia a cada hogar. Comenzamos como una pequeña pizzería familiar y hoy somos un referente de la pizza tradicional.</p>
-                    <p>Nuestra masa madre es el corazón de cada pizza, fermentada naturalmente durante 48 horas para lograr el sabor y textura perfectos que nos distinguen.</p>
-                    <p>Cada día honramos la tradición italiana utilizando solo ingredientes premium y recetas transmitidas por generaciones.</p>
+        <!-- Specialties Section -->
+        <section id="especialidades" class="py-20 bg-red-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-red-800 mb-4">Especialidades de la Casa</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Creaciones únicas que solo encontrarás en Mama Clara</p>
                 </div>
-                <div class="historia-values">
-                    <div class="value-item">
-                        <h3>🥖 Selección Integral</h3>
-                        <p>Tradicionales y auténticas</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all">
+                        <div class="text-center mb-4">
+                            <div class="text-5xl mb-2">🍕</div>
+                            <h3 class="text-2xl font-bold text-red-800">Pizza Mama Clara</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Nuestra creación signature con ingredientes secretos</p>
+                        <p class="text-3xl font-bold text-red-600">$22.99</p>
                     </div>
-                    <div class="value-item">
-                        <h3>🌾 Masa Madre</h3>
-                        <p>Caseras y esponjosas</p>
+                    
+                    <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all">
+                        <div class="text-center mb-4">
+                            <div class="text-5xl mb-2">🍕</div>
+                            <h3 class="text-2xl font-bold text-red-800">Pizza Cuatro Quesos</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Muzzarella, cheddar, parmesano y roquefort</p>
+                        <p class="text-3xl font-bold text-red-600">$19.99</p>
                     </div>
-                    <div class="value-item">
-                        <h3>🍅 Productos Premium</h3>
-                        <p>Mozarella fresca de calidad superior</p>
+                    
+                    <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all">
+                        <div class="text-center mb-4">
+                            <div class="text-5xl mb-2">🍕</div>
+                            <h3 class="text-2xl font-bold text-red-800">Pizza Fugazzeta</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Cebolla caramelizada, muzzarella y orégano</p>
+                        <p class="text-3xl font-bold text-red-600">$17.99</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contacto">
-            <h2>Pide tu Pizza</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📍 Dirección</h3>
-                    <p>Saravi 2155, La Lonja</p>
+        <!-- Contact Section -->
+        <section id="contacto" class="py-20 bg-red-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-red-800 mb-4">Visítanos</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Te esperamos con las mejores pizzas de la ciudad</p>
                 </div>
-                <div class="contact-item">
-                    <h3>📞 Teléfono</h3>
-                    <p>+54 9 11 3011-2155</p>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xl">📍</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-red-800">Dirección</h3>
+                                    <p class="text-gray-600">Av. Corrientes 1234, CABA</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xl">📞</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-red-800">Teléfono</h3>
+                                    <p class="text-gray-600">+54 9 11 3011-2155</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xl">🕐</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-red-800">Horario</h3>
+                                    <p class="text-gray-600">Lunes a Domingos: 18:00 - 23:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold text-red-800 mb-4">🗺️ Ubicación</h3>
+                        <div class="rounded-xl overflow-hidden">
+                            <iframe 
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=-58.8475%2C-34.4163%2C-58.8455%2C-34.4143&layer=mapnik&marker=-34.415283%2C-58.846475" 
+                                width="100%" 
+                                height="300" 
+                                frameborder="0" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <h3>📧 Email</h3>
-                    <p>pedidos@pizzeria.com</p>
-                </div>
-                <div class="contact-item">
-                    <h3>🕐 Horario</h3>
-                    <p>Lunes a Jueves: 12:00 - 23:00</p>
-                    <p>Viernes a Domingos: 12:00 - 01:00</p>
-                </div>
-            </div>
-            <div class="map-container">
-                <h3>🗺️ Ubicación</h3>
-                <div class="map-wrapper">
-                    <iframe 
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.8375%2C-34.4547%2C-58.8355%2C-34.4527&layer=mapnik&marker=-34.453736%2C-58.836502" 
-                        width="100%" 
-                        height="300" 
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <p>Saravi 2155, La Lonja</p>
-            </div>
-            <div class="delivery-info">
-                <h3>🛵 Delivery</h3>
-                <p>Delivery gratuito en pedidos mayores a $20</p>
-                <p>Tiempo estimado: 30-45 minutos</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="social-links">
-            <a href="#" class="social-link" title="TikTok">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.03 1.68-.24 3.44-1.14 4.88-.98 1.57-2.66 2.6-4.48 2.83-1.48.2-3.06-.03-4.35-.82-.95-.58-1.72-1.46-2.22-2.48-.51-1.04-.71-2.22-.66-3.38.07-1.56.54-3.12 1.52-4.36.99-1.28 2.46-2.13 4.04-2.36.96-.15 1.95-.1 2.9.12.01 1.48-.01 2.96-.02 4.44-.6-.23-1.28-.35-1.92-.2-.83.15-1.54.78-1.79 1.58-.26.81-.1 1.74.46 2.37.57.64 1.49.89 2.32.68.73-.18 1.31-.75 1.53-1.47.21-.67.2-1.39.2-2.09-.02-3.89.01-7.78-.02-11.67-.01-.96-.06-1.92-.19-2.87z"/>
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/mamaclara.pilar?igshid=bm5nNTZmZDM4Znh0" class="social-link" title="Instagram" target="_blank">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"></path>
-                </svg>
-            </a>
-            <a href="#" class="social-link" title="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-            </a>
+    <!-- Footer -->
+    <footer class="pizza-pattern text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="text-3xl">🍕</div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Mama Clara</h3>
+                            <p class="opacity-90">Pizzería Artesanal</p>
+                        </div>
+                    </div>
+                    <p class="opacity-80">La mejor pizza tradicional italiana</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-yellow-300 transition">Inicio</a></li>
+                        <li><a href="#carta" class="hover:text-yellow-300 transition">Carta</a></li>
+                        <li><a href="#especialidades" class="hover:text-yellow-300 transition">Especialidades</a></li>
+                        <li><a href="#contacto" class="hover:text-yellow-300 transition">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+                            <span>📱</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+                            <span>📷</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 text-center">
+                <p class="opacity-80">&copy; 2024 Mama Clara. Todos los derechos reservados.</p>
+                <p class="opacity-60 mt-2">Hecho con ❤️ y Vantu</p>
+            </div>
         </div>
-        <p>&copy; 2024 <span class="brand-name">Mama Clara</span>. Todos los derechos reservados.</p>
-        <p>hecho con vantu</p>
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
+    <!-- WhatsApp Float Button -->
     <a href="https://wa.me/5491130112155?text=¡Hola!%20Vi%20tu%20página%20web%20y%20me%20gustaría%20hacer%20un%20pedido." 
-       class="whatsapp-float" 
        target="_blank" 
-       title="Pedir por WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor">
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 z-40">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.89-11.893A11.821 11.821 0 0020.465 3.488"/>
         </svg>
     </a>
 
     <script>
-        let esModoBasico = false;
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-        // Función para alternar entre versiones
-        function toggleDemo() {
-            const botonDemo = document.querySelector('.demo-premium-btn');
+        // Menu Category Filter
+        function showCategory(category) {
+            const items = document.querySelectorAll('.menu-item');
+            const buttons = document.querySelectorAll('button[onclick^="showCategory"]');
             
-            if (!esModoBasico) {
-                // Activar modo básico
-                mostrarDemoBasico();
-                botonDemo.textContent = 'Volver a Premium';
-                botonDemo.style.background = 'linear-gradient(135deg, #FF6B6B, #FF8E53)';
-                esModoBasico = true;
-            } else {
-                // Volver a modo premium
-                volverAPremium();
-                botonDemo.textContent = 'Demo Premium';
-                botonDemo.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
-                esModoBasico = false;
-            }
-        }
-
-        // Función para mostrar versión básica
-        function mostrarDemoBasico() {
-            console.log('Activando modo básico...');
-            
-            // Ocultar todas las secciones excepto las básicas
-            const seccionesAOcultar = [
-                'carta', 
-                'especialidades',
-                'contacto'
-            ];
-            
-            seccionesAOcultar.forEach(id => {
-                const seccion = document.getElementById(id);
-                if (seccion) {
-                    seccion.style.display = 'none';
-                    console.log(`Ocultando sección: ${id}`);
+            // Hide all items
+            items.forEach(item => {
+                if (item.dataset.category === category) {
+                    item.style.display = 'block';
                 } else {
-                    console.log(`No se encontró sección: ${id}`);
+                    item.style.display = 'none';
                 }
             });
             
-            // Ocultar botón "Pide Ahora" del hero
-            const botonHero = document.querySelector('.cta-button');
-            if (botonHero) {
-                botonHero.style.display = 'none';
-                console.log('Ocultando botón CTA');
-            }
-            
-                        
-            // Actualizar navegación para versión básica
-            actualizarNavegacionBasica();
-            
-            // Ajustar el espaciado del main
-            const main = document.querySelector('main');
-            if (main) {
-                main.style.marginTop = '0';
-                console.log('Ajustando espaciado del main');
-            }
-        }
-
-        // Función para actualizar navegación a versión básica
-        function actualizarNavegacionBasica() {
-            const navLinks = document.querySelector('.nav-links');
-            if (navLinks) {
-                navLinks.innerHTML = `
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                `;
-            }
-        }
-
-        // Función para restaurar navegación premium
-        function actualizarNavegacionPremium() {
-            const navLinks = document.querySelector('.nav-links');
-            if (navLinks) {
-                navLinks.innerHTML = `
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                `;
-            }
-        }
-
-        // Función para volver a versión premium
-        function volverAPremium() {
-            console.log('Volviendo a modo premium...');
-            
-            // Mostrar todas las secciones ocultas
-            const seccionesAMostrar = [
-                'carta', 
-                'especialidades',
-                'contacto'
-            ];
-            
-            seccionesAMostrar.forEach(id => {
-                const seccion = document.getElementById(id);
-                if (seccion) {
-                    seccion.style.display = 'block';
-                    console.log(`Mostrando sección: ${id}`);
+            // Update button styles
+            buttons.forEach(button => {
+                if (button.getAttribute('onclick').includes(category)) {
+                    button.className = 'bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-all';
                 } else {
-                    console.log(`No se encontró sección: ${id}`);
+                    button.className = 'bg-white text-red-600 border-2 border-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-50 transition-all';
                 }
             });
-            
-            // Mostrar botón "Pide Ahora" del hero
-            const botonHero = document.querySelector('.cta-button');
-            if (botonHero) {
-                botonHero.style.display = 'inline-block';
-                console.log('Mostrando botón CTA');
-            }
-            
-                        
-            // Restaurar navegación premium
-            actualizarNavegacionPremium();
-            
-            // Restaurar el espaciado del main
-            const main = document.querySelector('main');
-            if (main) {
-                main.style.marginTop = '80px';
-                console.log('Restaurando espaciado del main');
-            }
         }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+        });
     </script>
 </body>
 </html>
